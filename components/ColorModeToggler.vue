@@ -1,5 +1,7 @@
 <template>
-  <button @click="toggleMode">{{ nextMode }}</button>
+  <button @click="toggleMode">
+    <nuxt-icon :name="`color-mode/${nextMode}`" />
+  </button>
 </template>
 
 <script setup lang="ts">
