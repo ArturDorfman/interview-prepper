@@ -1,6 +1,6 @@
 <template>
   <button @click="toggleMode">
-    <Icon :name="modesIcons[nextMode]" />
+    <Icon :name="modesIcons[nextMode]" size="20px" />
   </button>
 </template>
 
