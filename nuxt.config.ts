@@ -8,8 +8,18 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     'nuxt-icons',
-    'nuxt-icon'
+    'nuxt-icon',
+    '@nuxt/content'
   ],
+  content: {
+    highlight: {
+      theme: {
+        default: 'github-light',
+        dark: 'github-dark',
+        sepia: 'monokai'
+      }
+    }
+  },
   colorMode: {
     classSuffix: ''
   }
