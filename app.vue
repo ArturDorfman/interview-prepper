@@ -1,6 +1,10 @@
 <template>
-  <div class="container mx-auto">
+  <div class="max-w-7xl mx-auto px-6 h-screen flex flex-col">
     <Header />
+    
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
 
