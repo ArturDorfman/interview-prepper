@@ -1,15 +1,20 @@
 <template>
   <button @click="toggleMode">
-    <nuxt-icon :name="`color-mode/${nextMode}`" />
+    <Icon :name="modesIcons[nextMode]" />
   </button>
 </template>
 
 <script setup lang="ts">
 const colorMode = useColorMode()
 
-const modes = ['system', 'light', 'dark']
+const modesIcons = {
+  system: 'i-ph-monitor-duotone',
+  light: 'i-ph-sun',
+  dark: 'i-ph-moon-duotone'
+} as Record<string, string>
 
 const nextMode = computed(() => {
+  const modes = ['system', 'light', 'dark']
   const currentIndex = modes.indexOf(colorMode.preference)
   return currentIndex + 1 === modes.length
     ? modes[0]
