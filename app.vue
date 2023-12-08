@@ -9,15 +9,6 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
-  title: '[title]',
-  description: '[description]',
-  // ogTitle: '[og:title]',
-  // ogDescription: '[og:description]',
-  // ogImage: '[og:image]',
-  // ogUrl: '[og:url]'
-})
-
 useHead({
   titleTemplate:'Interview prepper - %s',
   link: [
