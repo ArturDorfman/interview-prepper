@@ -12,8 +12,7 @@
 const route = useRoute()
 const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
 const navList = computed(() => {
-  let index = 0
-  if (route.fullPath === '/theory/markup') index = 1
+  const index = route.fullPath === '/theory/markup' ? 1 : 0
   return (navigation.value || [])[index].children
 })
 </script>
