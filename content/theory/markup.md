@@ -1,5 +1,6 @@
 ---
-description: 'This is a markup page of "Inteview prepper" guide'
+title: 'Markup (html/css)'
+description: This is a markup section of "Inteview prepper" guide
 head:
   meta:
     - name: 'keywords'
