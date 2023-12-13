@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <SideBarNavigation />
+  <main class="max-w-7xl mx-auto w-full flex gap-8">
+    <div class="basis-1/4">
+      <SideBarNavigation />
+    </div>
 
-    <main class="flex justify-center">
-      <slot />
-    </main>
-  </div>
+    <slot />
+  </main>
 </template>

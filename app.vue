@@ -2,7 +2,7 @@
   <div class="px-6 h-screen flex flex-col">
     <Header />
     
-    <NuxtLayout class="h-full max-w-4xl mx-auto">
+    <NuxtLayout class="h-full">
       <NuxtPage />
     </NuxtLayout>
   </div>
