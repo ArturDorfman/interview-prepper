@@ -14,7 +14,6 @@ head:
     - name: 'og:title'
       content: 'Markup section'
 publishedAt: 2023-12-08 17:15:00
-toc: true
 ---
 
 # Markup (html/css)
