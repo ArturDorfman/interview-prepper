@@ -1,5 +1,9 @@
 <template>
-  <p>logo</p>
+  <div>
+    <NuxtLink to="/">
+      <span>Logo</span>
+    </NuxtLink>
+  </div>
 </template>
 
 <script setup lang="ts">
