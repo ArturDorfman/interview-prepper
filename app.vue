@@ -1,8 +1,8 @@
 <template>
-  <div class="max-w-7xl mx-auto px-6 h-screen flex flex-col">
+  <div class="px-6 h-screen flex flex-col">
     <Header />
     
-    <NuxtLayout>
+    <NuxtLayout class="h-full max-w-4xl mx-auto">
       <NuxtPage />
     </NuxtLayout>
   </div>
