@@ -1,8 +1,8 @@
 <template>
-  <div class="px-8 h-screen flex flex-col">
+  <div class="h-screen flex flex-col">
     <Header />
     
-    <NuxtLayout class="h-full">
+    <NuxtLayout class="h-full px-8">
       <NuxtPage />
     </NuxtLayout>
   </div>
