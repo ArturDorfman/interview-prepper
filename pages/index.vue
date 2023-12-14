@@ -10,7 +10,7 @@
 
     <button class="mt-10 z-10">
       <NuxtLink
-          to="/theory/markup"
+          to="/guide/markup"
           class="rounded-md px-3.5 py-2.5 text-white dark:text-gray-900
         bg-green-500 hover:bg-green-600 dark:bg-green-400 dark:hover:bg-green-500
           flex justify-center items-center"
