@@ -1,12 +1,27 @@
-body {
-  font-family: 'DM Sans';
-  @apply bg-white dark:bg-[#020420];
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #00C16A;
+    --color-text: #111827;
+    --color-title: #111827;
+
+    background-color: #FFF;
+    color: var(--color-text);
+  }
+
+  :root[class~="dark"] {
+    --color-primary: #00DC82;
+    --color-text: #9ca3af;
+    --color-title: #FFF;
+
+    background-color: #020420;
+    color: var(--color-text);
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-gray-900 dark:text-white;
-}
-
-p, span, li, button {
-  @apply text-gray-900 dark:text-gray-400;
+  @apply text-title dark:text-title;
 }
