@@ -1,5 +1,5 @@
 <template>
-  <aside class="sticky top-8">
+  <aside class="sticky top-16">
     <div class="font-semibold mb-2">
       <span>Table of Contents</span>
     </div>
