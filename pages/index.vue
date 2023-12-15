@@ -23,6 +23,6 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({ layout: 'start' })
+definePageMeta({ layout: 'blank' })
 useHead({ title: 'Start page' })
 </script>
