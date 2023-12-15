@@ -2,20 +2,26 @@
   <article class="prose dark:prose-invert prose-pre:bg-white max-w-none w-full
     dark:prose-pre:bg-gray-800 prose-pre:text-gray-700 dark:prose-pre:text-gray-300"
   >
-    <ContentDoc v-slot="{ doc }">
-      <div class="grid grid-cols-12 gap-8">
-        <div class="not-prose col-span-2">
-          <SideBarNavigation />
-        </div>
+    <ContentDoc>
+      <template #not-found>
+        Document not found
+      </template>
 
-        <div class="col-span-8">
-          <ContentRenderer :value="doc" />
-        </div>
+      <template #default="{ doc }">
+        <div class="grid grid-cols-12 gap-8">
+          <div class="not-prose col-span-2">
+            <SideBarNavigation />
+          </div>
 
-        <div class="not-prose col-span-2">
-          <TableOfContents :links="doc.body.toc.links" />
+          <div class="col-span-8">
+            <ContentRenderer :value="doc" />
+          </div>
+
+          <div class="not-prose col-span-2">
+            <TableOfContents :links="doc.body.toc.links" />
+          </div>
         </div>
-      </div>
+      </template>
     </ContentDoc>
   </article>
 </template>
