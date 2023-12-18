@@ -1,5 +1,5 @@
 ---
-title: 'Network basics'
-description: This is a Network basics section of "Inteview prepper" guide
+title: 'Network and Protocols'
+groupId: 'web'
 ---
 # Network basics

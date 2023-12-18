@@ -1,5 +1,5 @@
 ---
 title: 'Javascript'
-description: This is a javascript section of "Inteview prepper" guide
+groupId: 'essentials'
 ---
 # javascript

@@ -1,5 +1,5 @@
 ---
 title: 'Architecture'
-description: This is a Architecture section of "Inteview prepper" guide
+groupId: 'web'
 ---
 # Architecture

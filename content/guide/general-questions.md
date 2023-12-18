@@ -1,5 +1,5 @@
 ---
 title: 'General questions'
-description: This is a General questions section of "Inteview prepper" guide
+groupId: 'general'
 ---
 # General questions

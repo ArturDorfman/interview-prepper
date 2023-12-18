@@ -1,5 +1,5 @@
 ---
 title: 'Git'
-description: This is a git section of "Inteview prepper" guide
+groupId: 'essentials'
 ---
 # git
