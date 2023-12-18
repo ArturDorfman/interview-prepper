@@ -3,7 +3,12 @@
     <li v-for="link in links" :key="link.id">
       <NuxtLink
         :to="{ path: route.path, hash: `#${link.id}` }"
-        :class="{ 'ml-4': level, 'text-primary dark:text-primary': activeTocId === link.id }"
+        class="text-gray-500 dark:text-gray-400 duration-200"
+        :class="{
+          'ml-4': level,
+          'hover:text-black dark:hover:text-white': activeTocId !== link.id,
+          'text-primary dark:text-primary': activeTocId === link.id
+        }"
       >
         {{ link.text }}
       </NuxtLink>

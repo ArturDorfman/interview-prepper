@@ -1,12 +1,17 @@
 <template>
   <section class="sticky top-16">
     <ul>
-      <li
-        v-for="navItem in navList"
-        :key="navItem._path"
-        :class="{ 'text-primary': navItem._path === route.path }"
-      >
-        <NuxtLink :to="navItem._path">{{ navItem.title }}</NuxtLink>
+      <li v-for="navItem in navList" :key="navItem._path">
+        <NuxtLink
+          :to="navItem._path"
+          class="text-gray-500 dark:text-gray-400 duration-200"
+          :class="{
+            'hover:text-black dark:hover:text-white': navItem._path !== route.path,
+            'text-primary dark:text-primary': navItem._path === route.path
+          }"
+        >
+          {{ navItem.title }}
+        </NuxtLink>
       </li>
     </ul>
   </section>
