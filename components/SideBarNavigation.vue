@@ -1,5 +1,5 @@
 <template>
-  <section class="sticky top-16">
+  <section class="sticky top-16 overflow-y-auto side-bar-scroll">
     <ul>
       <li
         v-for="([groupName, groupedContent]) in contentGroups"
