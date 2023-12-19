@@ -1,5 +1,5 @@
 ---
 title: 'Nuxt'
-groupId: 'frameworks'
+groupId: 'frameworks-and-libraries'
 ---
 # Nuxt

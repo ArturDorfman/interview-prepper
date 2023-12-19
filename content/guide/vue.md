@@ -1,5 +1,5 @@
 ---
 title: 'Vue'
-groupId: 'frameworks'
+groupId: 'frameworks-and-libraries'
 ---
 # Introduction to Vue 3
