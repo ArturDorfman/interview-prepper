@@ -1,5 +1,5 @@
 <template>
-  <aside class="sticky top-16" v-if="links.length">
+  <aside v-if="links.length" class="sticky top-16 overflow-y-auto side-bar-scroll">
     <div class="font-semibold mb-2">
       <span>Table of Contents</span>
     </div>
