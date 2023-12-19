@@ -9,15 +9,15 @@
 
       <template #default="{ doc }">
         <div class="grid grid-cols-12 gap-8">
-          <div class="not-prose col-span-2">
+          <div class="not-prose col-span-2 text-sm">
             <SideBarNavigation />
           </div>
 
-          <div class="col-span-8">
+          <div class="col-span-8 prose-a:no-underline">
             <ContentRenderer :value="doc" />
           </div>
 
-          <div class="not-prose col-span-2">
+          <div class="not-prose col-span-2 text-sm">
             <TableOfContents :links="doc.body.toc.links" />
           </div>
         </div>
