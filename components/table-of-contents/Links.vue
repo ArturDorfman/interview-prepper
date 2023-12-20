@@ -1,6 +1,6 @@
 <template>
   <ul class="mb-3">
-    <li v-for="link in links" :key="link.id">
+    <li v-for="link in links" :key="link.id" class="mb-2">
       <NuxtLink
         :to="{ path: route.path, hash: `#${link.id}` }"
         class="text-gray-500 dark:text-gray-400 duration-200"

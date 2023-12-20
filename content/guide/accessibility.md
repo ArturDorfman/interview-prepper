@@ -5,8 +5,6 @@ groupId: 'web'
 
 # Accessibility
 
-## Junior
-
 ### What is web accessibility?
 ### How to test web accessibility?
 ### Name the basic techniques for creating accessible web interfaces.
@@ -15,8 +13,6 @@ groupId: 'web'
 
 ---
 
-## Middle
-
 ### What availability levels do you know? How are they different?
 ### Describe the features of the implementation of website navigation from the keyboard.
 ### What are HTML5 Landmarks used for?
@@ -24,8 +20,6 @@ groupId: 'web'
 ### The designer consults with you about the design of the future project. What advice about accessibility would you give him?
 
 ---
-
-## Senior
 
 ### What is ARIA and what are its main roles, states and properties?
 ### Describe how to create an accessible modal window from scratch. What are the options and what should I look out for?

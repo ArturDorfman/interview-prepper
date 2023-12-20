@@ -2,6 +2,7 @@
 title: 'Web Performance'
 groupId: 'web'
 ---
+
 # Web Performance
 
 ### What do you know about Core Web Vitals?

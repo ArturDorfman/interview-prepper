@@ -4,8 +4,6 @@ groupId: 'general'
 ---
 # General questions
 
-## Junior Developer
-
 ### Do you follow the news in the world of frontend? How exactly?
 
 ### What separates good code from bad code?
@@ -20,8 +18,6 @@ groupId: 'general'
 
 ---
 
-## Middle Developer
-
 ### Name the principles of OOP.
 ### Explain each component of SOLID.
 ### Why should you pay attention to the complexity of the algorithm?
@@ -33,8 +29,6 @@ groupId: 'general'
 ### What is refactoring and how do you do it?
 
 ---
-
-## Senior Developer
 
 ### What are the necessary knowledge and skills a Senior Developer needs to have?
 ### What should be the work and communication in the development team?

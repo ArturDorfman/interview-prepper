@@ -5,8 +5,6 @@ groupId: 'web'
 
 # Performance
 
-## Middle
-
 ### What are the main metrics that measure site performance?
 ### What is Cumulative Layout Shift and how to improve its value?
 ### What is Critical CSS?
@@ -20,8 +18,6 @@ groupId: 'web'
 ### How would you organize the loading of a lot of CSS styles on a page so that the user can interact with it as quickly as possible, while avoiding layout drift?
 
 ---
-
-## Senior
 
 ### The conditional site has a custom decorative font that negatively affects performance. Name all possible options for its optimization.
 ### Imagine that there is an old project on support (not a JS stack, back on a PHP framework) that was transferred to you from another team. The task: optimize the frontend project as much as possible within the budget and 16 hours. Describe your optimization strategy and steps within the given constraints.

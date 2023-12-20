@@ -1,5 +1,6 @@
 ---
 title: 'Angular'
-groupId: 'frameworks-and-libraries'
+groupId: 'frameworks and libraries'
 ---
+
 # Angular

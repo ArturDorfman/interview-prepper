@@ -5,15 +5,11 @@ groupId: 'web'
 
 # Testing
 
-## Junior
-
 ### Whose responsibility is a bug in production, the developer or the tester?
 ### How do you test your code? Have you written code that could not be tested before deployment?
 ### What is AAA in testing?
 
 ---
-
-## Middle
 
 ### Why is testing implemented?
 ### Are there cases where testing is not appropriate?
@@ -26,8 +22,6 @@ groupId: 'web'
 ### How do you detect and isolate errors in your code? What debugging tools do you use?
 
 ---
-
-## Senior
 
 ### Do you have experience covering large systems with tests?
 ### Do you have experience in customizing test utilities for project needs?

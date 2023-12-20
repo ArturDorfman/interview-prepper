@@ -4,8 +4,6 @@ groupId: 'general'
 ---
 # Algorithms and data structures
 
-## Junior Developer
-
 ### What is algorithmic complexity and how to evaluate it?
 ### Explain basic data structures such as arrays, lists, stacks, and queues.
 ### What sorting algorithms do you know and how do they work?
@@ -18,8 +16,6 @@ groupId: 'general'
 ### What algorithms can be used to find the shortest path in a graph?
 
 ---
-
-## Senior Developer
 
 ### What non-trivial data structures have you worked with or know about?
 ### Tell us about CRDT.

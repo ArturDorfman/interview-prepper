@@ -4,8 +4,6 @@ groupId: 'essentials'
 ---
 # Markup
 
-## Junior
-
 ### What is a DOCTYPE and why is it used?
 ### What are the main tags of an HTML page structure?
 ### What are semantic tags and why do you need them? Give examples of such tags.
@@ -62,8 +60,6 @@ groupId: 'essentials'
 
 ---
 
-## Middle
-
 ### What is micro-markup?
 ### What is SEO? What should a developer pay attention to in order to ensure good SEO performance in the future?
 ### What techniques for organizing icons on a website do you know? List the pros and cons of each.
@@ -92,8 +88,6 @@ groupId: 'essentials'
 ### Duplication of HTML/CSS for responsive design: pros, cons, pitfalls.
 
 ---
-
-## Senior
 
 ### What class naming systems do you know? Do you use any at all?
 ### How do you compile CSS?

@@ -1,5 +1,6 @@
 ---
 title: 'React'
-groupId: 'frameworks-and-libraries'
+groupId: 'frameworks and libraries'
 ---
+
 # React

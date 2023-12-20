@@ -4,8 +4,6 @@ groupId: 'essentials'
 ---
 # Javascript
 
-## Junior
-
 ### List data types in JS.
 ### What is the difference between an array and an object? In what cases do you use what?
 ### Events in JS. Talk about event propagation, bubbling, delegation, preventing, etc.
@@ -34,8 +32,6 @@ groupId: 'essentials'
 
 ---
 
-## Middle
-
 ### What is the difference between LocalStorage, SessionStorage and cookies?
 ### When do you use Map and Set?
 ### Do you know of any ways to detect if an element is in the user's viewport?
@@ -63,8 +59,6 @@ groupId: 'essentials'
 ### Tell us about all the ways to use the '...' operator.
 
 ---
-
-## Senior
 
 ### How to traverse the Promises array in parallel? And consecutively?
 ### What is Symbol? What is its practical application?

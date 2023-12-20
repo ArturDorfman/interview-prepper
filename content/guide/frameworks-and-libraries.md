@@ -1,11 +1,9 @@
 ---
 title: 'Frameworks and Libraries'
-groupId: 'frameworks-and-libraries'
+groupId: 'frameworks and libraries'
 ---
 
 # Frameworks and Libraries
-
-## Junior
 
 ### Why are frameworks used, what are their advantages and disadvantages?
 ### What should be guided in choosing a framework?
@@ -33,8 +31,6 @@ groupId: 'frameworks-and-libraries'
 
 ---
 
-## Middle
-
 ### Tell us about state management in Vue.js.
 ### How to implement routing in React?
 ### How to optimize the rendering of components in React?
@@ -55,8 +51,6 @@ groupId: 'frameworks-and-libraries'
 ### What UI libraries do you know, what are their advantages and disadvantages?
 
 ---
-
-## Senior
 
 ### What's new in 18th version of React?
 ### How to keep a reference to a function with the current parameters, but not call useEffect one more time?
