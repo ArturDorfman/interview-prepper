@@ -2,7 +2,10 @@
 title: 'Algorithms and data structures'
 groupId: 'general'
 ---
+
 # Algorithms and data structures
+
+---
 
 ### What is algorithmic complexity and how to evaluate it?
 ### Explain basic data structures such as arrays, lists, stacks, and queues.

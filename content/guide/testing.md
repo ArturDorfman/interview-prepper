@@ -5,6 +5,8 @@ groupId: 'web'
 
 # Testing
 
+---
+
 ### Whose responsibility is a bug in production, the developer or the tester?
 ### How do you test your code? Have you written code that could not be tested before deployment?
 ### What is AAA in testing?

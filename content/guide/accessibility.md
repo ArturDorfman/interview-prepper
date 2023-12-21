@@ -5,6 +5,8 @@ groupId: 'web'
 
 # Accessibility
 
+---
+
 ### What is web accessibility?
 ### How to test web accessibility?
 ### Name the basic techniques for creating accessible web interfaces.

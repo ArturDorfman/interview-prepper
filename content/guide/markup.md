@@ -5,6 +5,8 @@ groupId: 'essentials'
 
 # Markup
 
+---
+
 ### DOCTYPE
 #### What is a DOCTYPE and why is it used?
 

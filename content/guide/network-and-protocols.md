@@ -2,7 +2,10 @@
 title: 'Network and Protocols'
 groupId: 'web'
 ---
+
 # Network and Protocols
+
+---
 
 ### What is HTTP and HTTPS, what is the difference between them?
 ### What are the main HTTP request methods (GET, POST, PUT, DELETE) and their differences?

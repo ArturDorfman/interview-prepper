@@ -5,6 +5,8 @@ groupId: 'web'
 
 # Web Performance
 
+---
+
 ### What do you know about Core Web Vitals?
 ### What is the difference between laboratory and field performance measurements?
 ### What image formats do you know, how do they differ?

@@ -5,6 +5,8 @@ groupId: 'web'
 
 # Security
 
+---
+
 ### How to take care of web application security?
 ### Explain the principles of Cross-Site Scripting (XSS) and Cross-Site Request Forgery (CSRF) attacks and how to protect against them.
 ### What are the best practices for API security?

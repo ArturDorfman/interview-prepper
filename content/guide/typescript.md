@@ -1,8 +1,11 @@
 ---
-title: 'Typescript'
+title: 'TypeScript'
 groupId: 'essentials'
 ---
-# Typescript
+
+# TypeScript
+
+---
 
 ### What are the main differences between TypeScript and JavaScript?
 ### What are the pros and cons of using TypeScript?
@@ -15,3 +18,5 @@ groupId: 'essentials'
 ### What are Decorators in TypeScript and in what cases are they used?
 ### How do TypeScript use namespaces and modules?
 ### What JavaScript to TypeScript migration strategies do you know?
+### What is the difference between types and interfaces?
+

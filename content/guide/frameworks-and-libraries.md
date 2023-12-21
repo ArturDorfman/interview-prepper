@@ -5,6 +5,8 @@ groupId: 'frameworks and libraries'
 
 # Frameworks and Libraries
 
+---
+
 ### Why are frameworks used, what are their advantages and disadvantages?
 ### What should be guided in choosing a framework?
 ### What is a component-oriented approach?

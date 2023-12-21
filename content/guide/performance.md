@@ -5,6 +5,8 @@ groupId: 'web'
 
 # Performance
 
+---
+
 ### What are the main metrics that measure site performance?
 ### What is Cumulative Layout Shift and how to improve its value?
 ### What is Critical CSS?

@@ -2,7 +2,7 @@
   <div class="h-screen flex flex-col">
     <Header />
     
-    <NuxtLayout class="h-full px-8">
+    <NuxtLayout class="h-full px-8 py-3">
       <NuxtPage />
     </NuxtLayout>
   </div>

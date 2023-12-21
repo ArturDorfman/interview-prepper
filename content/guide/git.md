@@ -5,6 +5,8 @@ groupId: 'essentials'
 
 # Git and version control systems
 
+---
+
 ### What is a version control system and why is it used?
 ### What basic Git commands do you know and what are they used for?
 ### What is the difference between git merge and git rebase?

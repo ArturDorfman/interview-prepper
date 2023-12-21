@@ -5,6 +5,8 @@ groupId: 'web'
 
 # Architecture
 
+---
+
 ### By what characteristics will you choose a framework for a new project?
 ### By what characteristics will you choose a UI library for a new project?
 ### What are signals and how are they implemented in different frameworks?
