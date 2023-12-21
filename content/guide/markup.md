@@ -1,5 +1,5 @@
 ---
-title: 'Markup (HTML & CSS)'
+title: 'Markup'
 groupId: 'essentials'
 ---
 # Markup
