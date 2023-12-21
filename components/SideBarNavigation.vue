@@ -74,6 +74,7 @@ const sidebarIcons = {
   '/guide/performance': 'eos-icons:performance',
   '/guide/security': 'material-symbols:shield-locked-outline-rounded',
   '/guide/testing': 'simple-icons:testinglibrary',
-  '/guide/web-performance': 'streamline:programming-browser-dashboard-app-code-apps-programming-window-dashboard-performance'
+  '/guide/web-performance': 'streamline:programming-browser-dashboard-app-code-apps-programming-window-dashboard-performance',
+  '/guide/code-challenges': 'fluent:braces-variable-20-regular'
 }
 </script>
