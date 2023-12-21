@@ -66,7 +66,7 @@ const sidebarIcons = {
   '/guide/react': 'ion:logo-react',
   '/guide/vue': 'ion:logo-vue',
   '/guide/algorithms-and-data-structures': 'arcticons:algorithms',
-  '/guide/general-questions': 'streamline:mail-chat-bubble-square-warning-bubble-square-messages-notification-chat-message-warning-alert',
+  '/guide/interview-questions': 'streamline:mail-chat-bubble-square-warning-bubble-square-messages-notification-chat-message-warning-alert',
   '/guide/accessibility': 'solar:accessibility-linear',
   '/guide/architecture': 'material-symbols:architecture-rounded',
   '/guide/browser-api': 'streamline:programming-browser-code-2-code-browser-tags-angle-programming-bracket',
