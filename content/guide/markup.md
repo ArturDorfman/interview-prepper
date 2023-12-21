@@ -2,11 +2,31 @@
 title: 'Markup'
 groupId: 'essentials'
 ---
+
 # Markup
 
-### What is a DOCTYPE and why is it used?
-### What are the main tags of an HTML page structure?
-### What are semantic tags and why do you need them? Give examples of such tags.
+### DOCTYPE
+#### What is a DOCTYPE and why is it used?
+
+### HTML page structure
+#### What are the main tags of an HTML page structure?
+
+### Font size units
+#### What are rem, em, px for?
+#### What is the difference between rem and em?
+
+### Semantic tags in HTML5
+#### What are semantic tags and why do you need them? Give examples of such tags.
+#### What can you say about details, summary, adn dialog tags?
+
+### Meta tags
+#### What can you say about mate tags?
+#### What purpose of meta tags?
+
+### Open Graph Protocol
+#### What is Open Graph protocol and why it can be useful for websites?
+[link](https://www.freecodecamp.org/news/what-is-open-graph-and-how-can-i-use-it-for-my-website/)
+
 ### What can you say about the &lt;br&gt; tag?
 ### What tags from the latest updates do you know?
 ### What is the difference between &lt;div&gt; and &lt;span&gt;.
@@ -19,9 +39,25 @@ groupId: 'essentials'
 ### What is an iframe and what is it used for?
 ### What methods of submitting form data do you know?
 ### What are the main differences between block and inline elements in HTML? How do they affect the structure of the page?
-### What CSS methodologies do you know and use yourself? Justify the choice of the current methodology.
-### What are CSS Selectors? Give examples.
+
+### CSS methodologies
+#### What CSS methodologies do you know and use yourself? Justify the choice of the current methodology.
+BEM
+
+### CSS Selectors
+
+#### What are CSS Selectors? Give examples.
+#### What is the weight of a selector?
+#### What selector is the lightest?
+The Asterics selector “ * ” (select all)
+#### What selector is the hardest?
+This is the “!important”.
+
 ### How does imitation work in CSS?
+
+### How does a browser parse styles?
+Answer: From right to left.
+
 ### What is a "box model" in CSS and how can it be changed?
 ### What is the difference between margin and padding?
 ### What is Flexbox? How to implement layout using Flexbox or Grid and which approach is most appropriate in which case?
