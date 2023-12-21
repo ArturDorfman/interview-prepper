@@ -49,6 +49,9 @@ groupId: 'frameworks and libraries'
 ### How to execute the code before removing the component from the tree?
 ### When do you use useReducer?
 ### What UI libraries do you know, what are their advantages and disadvantages?
+### SSR, SSG, CSR, ISR
+
+[link](https://dou.ua/forums/topic/41585/?from=tg&utm_source=telegram&utm_medium=social)
 
 ---
 
