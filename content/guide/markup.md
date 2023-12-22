@@ -47,13 +47,16 @@ groupId: 'essentials'
 BEM
 
 ### CSS Selectors
-
 #### What are CSS Selectors? Give examples.
 #### What is the weight of a selector?
 #### What selector is the lightest?
 The Asterics selector “ * ” (select all)
 #### What selector is the hardest?
 This is the “!important”.
+
+### CSS preprocessors
+#### What are Pre & Post Processing CSS?
+#### What are the pros and cons of using CSS preprocessors?
 
 ### How does imitation work in CSS?
 
@@ -70,7 +73,6 @@ Answer: From right to left.
 ### How to make the last element of a list red regardless of the length of the list without JS?
 ### What are the color options?
 ### What is z-index? Does every item have one?
-### What are the pros and cons of using CSS preprocessors?
 ### What are the methods for centering an element in CSS?
 ### What methods of vertical centering in CSS do you know?
 ### Why are there different levels of headers if the size can be set with styles?
