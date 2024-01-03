@@ -27,13 +27,11 @@ groupId: 'frameworks and libraries'
 ### What are React hooks, what built-in hooks are you using?
 ### What conditions must a function meet to be a hook?
 ### How do you do server-side rendering in Next.js? What advantages do you see in this approach, in which cases do you think it is most appropriate?
-### What are components in Vue.js?
 ### How does the ngIf directive work in Angular?
 ### There is a task to calculate the coefficient that will be needed in the component and which depends only on a few constants in the project. Where is it best to count?
 
 ---
 
-### Tell us about state management in Vue.js.
 ### How to implement routing in React?
 ### How to optimize the rendering of components in React?
 ### How to optimize performance in large React applications?
