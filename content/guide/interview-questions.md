@@ -7,23 +7,229 @@ groupId: 'general'
 
 ### Junior
 #### Do you follow the news in the world of frontend? How exactly?
+I read people on LinkedIn, following few authors on the X (Twitter), time-to-time read articles on Medium. Also, I have email subscriptions.
+
 #### What separates good code from bad code?
+I'm gonna describe good code points and bad code is an opposite.
+
+**Good Code:**
+1. Readability and Maintainability:
+   * Code should be easy to read and understand.
+   * Follow a consistent coding style.
+   * Use meaningful variable and function names.
+   * Provide comments when necessary.
+
+2. Modularity:
+   * Break code into modular components or functions.
+   * Encapsulate functionality to promote code reuse.
+   
+3. Efficiency:
+   * Code should be optimized for performance where necessary.
+   * Avoid unnecessary computations or resource usage.
+
+4. Scalability:
+   * Design code that can scale as requirements evolve.
+   * Consider potential future changes.
+
+5. Correctness:
+   * Code should produce the expected output.
+   * Handle edge cases and errors gracefully.
+
+6. Documentation:
+   * Provide clear and comprehensive documentation.
+   * Include information on how to use and extend the code.
+
+7. Testing:
+   * Implement unit tests to ensure code correctness.
+   * Conduct thorough testing, including edge cases.
+
+8. Consistency:
+   * Follow established conventions and patterns.
+   * Be consistent in coding style and approach.
+
+9. Avoidance of Code Smells:
+   * Eliminate redundant code.
+   * Minimize code complexity.
+   * Avoid long methods or functions.
+
+10. Version Control:
+    * Use version control systems effectively (e.g., Git).
+    * Provide meaningful commit messages.
+
 #### What HTTP methods and statuses do you know?
+**HTTP Methods:**
+1. GET
+   * Retrieve information from the server.
+   * The request parameters (if any) are included in the URL.
+
+2. POST
+   * Submit data to be processed to a specified resource.
+   * Often used for form submissions.
+
+3. PUT
+   * Update a resource on the server.
+   * The request typically includes the updated data.
+
+4. DELETE
+   * Request the removal of a resource on the server.
+
+5. PATCH
+   * Apply partial modifications to a resource.
+
+6. HEAD
+   * Retrieve headers, similar to GET, but without the response body.
+
+7. OPTIONS
+   * Retrieve information about the communication options available for a resource.
+
+8. TRACE
+   * Echoes the received request to the client, primarily used for diagnostic purposes.
+
+9. CONNECT
+   * Establish a network connection to a resource, typically for secure connections (HTTPS).
+
+**HTTP Status Codes:**
+1. 1xx (Informational):
+   * 100 Continue
+   * 101 Switching Protocols
+   * 102 Processing
+
+2. 2xx (Successful):
+   * 200 OK
+   * 201 Created
+   * 204 No Content
+   * 206 Partial Content
+
+3. 3xx (Redirection):
+   * 301 Moved Permanently
+   * 302 Found (or temporarily moved)
+   * 304 Not Modified
+   * 307 Temporary Redirect
+
+4. 4xx (Client Error):
+   * 400 Bad Request
+   * 401 Unauthorized
+   * 403 Forbidden
+   * 404 Not Found
+   * 405 Method Not Allowed
+   * 422 Unprocessable Entity (often used in REST APIs)
+   * 429 Too Many Requests
+
+5. 5xx (Server Error):
+   * 500 Internal Server Error
+   * 501 Not Implemented
+   * 503 Service Unavailable
+   * 504 Gateway Timeout
+
+#### What is the difference between PUT and PATCH methods?
+Both methods are used for updating resources, PUT is generally associated with full updates or creation, while PATCH is specifically designed for partial updates.
+
+#### What is the difference between HTTP and HTTPS?
+The primary difference between HTTP and HTTPS lies in the level of security they provide.
+HTTPS is the preferred choice for websites and applications that require secure data transmission, especially when dealing with sensitive information.
+
 #### What is the risk of executing user-generated code?
-#### What is the difference between a class and an abstract class?
+User-generated code may contain security vulnerabilities, such as code injection, SQL injection, or other exploits that could be used to compromise the system.
+
+#### What is the difference between a class and an abstract class in TS?
+Abstract class can't be instantiated. Abstract class is used to be inherited by other classes. 
 
 ---
 
 ### Middle
-#### Are the principles of DRY, KISS, YAGNI known?
+#### Are the principles of SoC, DRY, KISS, YAGNI, BDUF, APO known?
+Yes, I know them all.
+1. SoC (Separation of Concerns)
+   * This principle advocates dividing a computer program into distinct sections, where each section addresses a specific concern.
+   By doing so, it becomes easier to understand, maintain, and modify the code.
+
+2. DRY (Don't Repeat Yourself)
+   * This principle advocates for reducing redundancy in code by avoiding duplications.
+   The idea is that each piece of knowledge or logic should only exist in a single place in the codebase.
+   This not only makes the code more maintainable but also reduces the chances of errors caused by inconsistencies in duplicated code.
+
+3. KISS (Keep It Simple, Stupid)
+   * The KISS principle suggests that simplicity should be a key goal in design and implementation.
+   It encourages developers to avoid unnecessary complexity and choose the simplest solution that meets the requirements.
+   A simple and straightforward design is generally easier to understand, maintain, and troubleshoot.
+
+4. YAGNI (You Ain't Gonna Need It)
+   * YAGNI advises against adding features to a software project until they are actually needed.
+   Developers should avoid implementing functionality based on assumptions about future requirements that may or may not materialize.
+   This principle helps prevent over-engineering and ensures that the software remains focused on current needs.
+
+5. BDUF (Big Design Up Front)
+   * BDUF suggests that extensive planning and design should be done before starting the implementation of a project.
+   However, many modern development methodologies, such as Agile, emphasize iterative and adaptive planning, allowing for adjustments as the project progresses.
+
+6. APO (Avoid Premature Optimization)
+   * APO advises against optimizing code for performance before it is necessary.
+   Premature optimization can lead to complex and hard-to-maintain code.
+   It's often better to focus on writing clean and understandable code first and optimize later if performance issues arise.
+
 #### Explain each component of SOLID.
+[SOLID](https://www.youtube.com/watch?v=TxZwqVTaCmA&t=2s&ab_channel=UlbiTV) is an acronym that represents a set of five design principles for writing maintainable and scalable software.
+1. **Single Responsibility Principle (SRP)**
+   * **Definition:** A class should have only one reason to change, meaning that it should have only one responsibility or job.
+   * **Explanation:** This principle emphasizes that a class should focus on doing one thing and doing it well. 
+   If a class has multiple responsibilities, it becomes more difficult to maintain, understand, and modify. 
+   Separating concerns makes the code more modular and adaptable to change.
+
+2. **Open/Closed Principle (OCP)**
+   * **Definition:** Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.
+   * **Explanation:** This principle encourages developers to design their systems in a way that allows for new functionality to be added through extension rather than altering existing code. 
+   This reduces the risk of introducing bugs into well-established code and promotes the use of interfaces and abstract classes to facilitate future extensions.
+
+3. **Liskov Substitution Principle (LSP)**
+   * **Definition:** Objects of a superclass should be able to be replaced with objects of a subclass without affecting the correctness of the program.
+   * **Explanation:** This principle ensures that subtypes must be substitutable for their base types without altering the correctness of the program. 
+   In other words, if a class is a subclass of another class, it should be usable in any place where its parent class is used without causing issues.
+
+4. **Interface Segregation Principle (ISP)**
+   * **Definition:** A class should not be forced to implement interfaces it does not use. 
+   In other words, a class should not be required to implement methods it does not need.
+   * **Explanation:** This principle advises against creating large, monolithic interfaces. 
+   Instead, it suggests breaking interfaces into smaller, more specific ones, tailored to the needs of the classes that implement them. 
+   This helps to avoid the problem of forcing classes to implement methods they don't actually need.
+
+5. **Dependency Inversion Principle (DIP)**
+   * **Definition:** High-level modules should not depend on low-level modules. Both should depend on abstractions. 
+   Abstractions should not depend on details; details should depend on abstractions.
+   * **Explanation:** This principle encourages the use of abstractions (interfaces or abstract classes) to decouple high-level modules from low-level modules. 
+   This inversion of dependencies makes the system more flexible and easier to maintain, as changes in low-level modules do not directly affect high-level modules.
+
 #### Why should you pay attention to the complexity of the algorithm?
+Paying attention to algorithmic complexity is essential for making informed decisions about algorithm selection, resource allocation, and overall system performance, which are critical factors in developing robust and efficient software applications.
+
 #### What entities do you divide the file structure into at the beginning of the design?
+It's depends on size of a current project. Usually, I've been using few architecture approaches. There are typical companies boiler plate and modular. Typical parts of these approaches are components, utils, views/pages, configs, assets etc.
+
 #### How do you know when it's time to separate a certain entity in a project?
-#### Briefly describe how the project is built?
-#### What is your favorite technology/tool/tag in development?
+It's important to weigh the pros and cons, considering factors like maintainability, scalability, and collaboration within your development team. 
+If code base becomes hard to maintain or even understand fast, we should start refactoring.  
+
 #### What do you do to make your code easier to maintain?
+For easier maintain my code base, I'm following few crucial principles.
+* Following design patterns
+* Regularly review and refactor your code to improve its structure and readability
+* Using Automated Testing
+* Using Version Control
+* Following Consistent Coding Style
+* Using Modularization
+
 #### What is refactoring and how do you do it?
+Refactoring is the process of restructuring existing code base without changing its external behavior.
+The main purpose of refactoring is to improve the code's readability, maintainability, and overall design without altering its functionality.
+
+Here are some common techniques and best practices for refactoring:
+1. Analyze the codebase to identify areas that could be improved in terms of readability, maintainability, or performance.
+2. Ensure that the existing code has a comprehensive suite of tests. This helps ensure that your changes do not introduce new bugs.
+3. Each step should be focused on a specific improvement and should not change the external behavior of the code.
+4. Use of Git to track changes. This allows you to revert to a previous state if something goes wrong.
+5. Use established design patterns to improve the overall structure of your code.
+6. Understand the existing code thoroughly before making changes. Refactoring should be done with confidence, backed by a good understanding of the codebase.
+7. Ensure that your code works and you don't produce new issues. Then update or add tests.
+8. Update Documentation
 
 ---
 
