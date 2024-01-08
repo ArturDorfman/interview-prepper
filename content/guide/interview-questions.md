@@ -235,19 +235,190 @@ Here are some common techniques and best practices for refactoring:
 
 ### Senior
 #### What are the necessary knowledge and skills a Senior Developer needs to have?
+A Senior Frontend Developer is expected to have a combination of technical expertise, soft skills, and a deep understanding of web development.
+
 #### What should be the work and communication in the development team?
+Effective work and communication are crucial in a development team to ensure the success of a project.
+**Work:**
+1. Clearly Defined Roles and Responsibilities
+2. Agile/Scrum Methodologies
+3. Collaboration
+4. Version Control System (e.g., Git)
+5. Code Reviews
+6. Testing
+7. Documentation
+
+**Communication:**
+1. Regular Meetings
+2. Open and Transparent Communication
+3. Use Collaboration Tools (e.g., Slack)
+4. Feedback Loops
+5. Problem-Solving Discussions
+6. Cultural Considerations
+7. Celebrate Achievements
+
 #### What methods of project evaluation and planning do you use?
+On our project we've been using Scrum and Kanban. As evaluation points we've been using story points and milestones.
+
 #### What do you pay attention to when choosing technologies for a project?
+When choosing technologies for a project, it's crucial to consider various factors to ensure the success and efficiency of the development process.
+1. Project Requirements
+   * Understand the specific needs and goals of the project.
+   * Consider scalability, performance, and security requirements.
+
+2. Technology Stack
+   * Evaluate frameworks, libraries, and tools.
+   * Ensure compatibility with the project requirements.
+   * Consider community support, documentation, and the availability of skilled developers.
+
+3. Flexibility and Extensibility
+   * Assess how easily the chosen technologies can adapt to changes in requirements.
+   * Consider the ability to integrate with other systems and technologies.
+
+4. Scalability
+   * Assess whether the chosen technologies can scale to meet future demands.
+   * Consider horizontal and vertical scaling options.
+
+5. User Experience
+   * Evaluate how the chosen technologies impact the end-user experience.
+   * Ensure that the technologies support the desired user interface and interactions.
+
+6. Performance
+   * Evaluate the performance of technologies under consideration.
+   * Consider factors like response time, throughput, and resource utilization.
+
+7. Cost
+   * Evaluate the overall cost of implementing and maintaining the chosen technologies.
+   * Consider licensing fees, infrastructure costs, and development expenses.
+
+8. Development Team Expertise
+   * Consider the skills and expertise of your development team.
+   * Choose technologies that align with the team's strengths or invest in training.
+
+9. Long-Term Viability
+   * Assess the long-term viability of the chosen technologies.
+   * Consider the technology's roadmap, updates, and community activity.
+
 #### How do you approach mentoring and developing less experienced developers?
+Everything is individual. So, mentoring should be personalized. Here are some strategies:
+1. Understand Their Goals and Strengths
+   * Begin by understanding the individual's career goals, interests, and current skill set.
+   * This will help you tailor your mentoring approach to their specific needs.
+
+2. Establish Clear Objectives
+   * Set clear, achievable objectives for the mentoring relationship. 
+   * This could include specific skills they want to acquire, projects they want to work on, or career milestones they aim to achieve.
+
+3. Regular Communication
+   * Maintain open and regular communication. 
+   * Schedule regular check-ins to discuss progress, address concerns, and provide feedback. 
+   * This can be done through one-on-one meetings, emails, or chat platforms.
+
+4. Encourage Independent Learning
+   * Guide them on how to learn independently. 
+   * Share resources, recommend books or online courses, and encourage them to explore new technologies. 
+   * This will foster a sense of curiosity and self-improvement.
+
+5. Pair Programming
+   * Engage in pair programming sessions where you work together on coding tasks.
+   * This allows them to learn by doing, while also receiving immediate feedback and guidance.
+
+6. Provide Constructive Feedback
+   * Offer constructive feedback on their work, highlighting both strengths and areas for improvement.
+   * Be specific in your feedback, and encourage them to ask questions to deepen their understanding.
+
+7. Lead by Example
+   * Demonstrate good coding practices, effective communication, and a strong work ethic.
+   * Leading by example can be a powerful way to convey the values and expectations of the team.
+
+8. Monitor Progress
+   * Regularly assess their progress and adjust the mentoring plan accordingly.
+   * This could involve adapting goals, providing additional support, or introducing new challenges as they grow.
+
+9. Be Patient and Supportive
+   * Recognize that everyone learns at their own pace.
+   * Be patient, supportive, and acknowledge their efforts.
+   * Celebrate small victories and provide encouragement during challenges.
+
 #### How do you introduce new technologies or practices into the team?
+Introducing new technologies or practices to a team can be a delicate process that requires effective communication, collaboration, and strategic planning.
+
+1. Understand the Team's Current State
+   * Assess the current workflow, practices, and technologies in use.
+   * Identify pain points, areas for improvement, and potential benefits of the new technology or practice.
+
+2. Define Clear Objectives
+   * Clearly outline the goals and objectives of introducing the new technology or practice.
+   * Highlight the specific benefits and improvements it can bring to the team and the organization as a whole.
+
+3. Highlight Success Stories
+   * Share success stories and case studies from other teams or organizations that have successfully implemented similar changes.
+   * Showcase tangible benefits to motivate the team.
+
+4. Provide Training and Support
+   * Offer training sessions or workshops to familiarize the team with the new technology or practice.
+   * Provide ongoing support and resources to help team members adapt to the changes.
+
+5. Start Small
+   * Implement the new technology or practice on a small scale or in a pilot project.
+   * Gather feedback and make adjustments before rolling it out to the entire team.
+
+6. Encourage Collaboration
+   * Foster a collaborative environment where team members can openly share their thoughts and concerns.
+   * Solicit feedback and involve the team in decision-making where appropriate.
+
+7. Measure and Evaluate
+   * Establish key performance indicators (KPIs) to measure the impact of the new technology or practice.
+   * Regularly evaluate progress and make adjustments based on feedback and results.
+
+8. Celebrate Milestones
+   * Acknowledge and celebrate achievements and milestones reached during the implementation.
+   * Recognize the efforts of team members who have embraced the changes.
+
+9. Be Patient and Flexible
+   * Understand that change takes time, and some team members may need more time to adapt.
+   * Be open to feedback and willing to make adjustments as needed.
+
+
 #### How do you solve conflicts and problems in a team?
-#### What will front-end development look like in two to three years?
-#### Which of the new frameworks have you tried?
-#### What are your pet projects, maybe you are doing open source?
-#### Do you speak at conferences/meetups?
-#### Do you regularly share professional opinions somewhere, in which communities do you participate?
-#### What podcasts/channels/authors would you recommend?
-#### What new tools have you started using and can you recommend?
+Successfully resolving conflicts and problems in a team requires proactive approaches and thoughtful interventions.
+1. Identifying the issue
+   * Acknowledge the conflict: Openly acknowledging the conflict's existence is crucial. Don't brush it under the rug, it can get worse.
+   * Gather information: Talk to team members involved, observe interactions, and consider past occurrences. This helps uncover the root cause, not just surface-level symptoms.
+   * Identify the type of conflict: Different approaches work for different types of conflict. Understanding whether it's personality clashes, task disagreements, communication issues, or resource allocation problems helps tailor your response.
+
+2. Facilitating effective communication
+   * Active listening: Create a safe space where everyone feels heard and understood. Encourage each team member to express their perspectives and concerns without interruption.
+   * Focus on "I" statements: Avoid accusatory "you" language. Instead, use "I" statements to own your feelings and perspectives, fostering empathy and understanding.
+   * Clarify misunderstandings: Sometimes, conflicts arise from miscommunication or assumptions. Rephrase what you've heard, ask clarifying questions, and ensure everyone is on the same page.
+
+3. Finding solutions
+   * Brainstorm collaboratively: Encourage everyone to contribute ideas for solutions. Brainstorming in a non-judgmental environment fosters creativity and ownership.
+   * Focus on common ground: Find areas of agreement, even if small, to build upon. Emphasize shared goals and the greater good of the team.
+   * Compromise and flexibility: Be willing to find a middle ground that addresses everyone's concerns to the best extent possible. Flexibility and a willingness to adapt are key.
+
+4. Building a stronger team
+   * Promote open communication: Foster a culture of open communication where team members feel comfortable expressing their concerns and addressing issues before they escalate.
+   * Regular check-ins: Schedule regular team meetings to discuss progress, address any lingering issues, and ensure everyone feels heard and supported.
+
+5. Additional Tips
+   * Seek external help: If the conflict is complex or difficult to resolve internally, consider involving a mediator or facilitator to guide the discussion and offer objective perspectives.
+   * Focus on solutions, not blame: Avoid dwelling on past mistakes or assigning blame. Instead, focus on finding solutions and implementing positive changes moving forward.
+   * Prioritize team success: Remind everyone that resolving the conflict and working together effectively is ultimately in the best interest of the team and its goals.
+
+[//]: # (#### What will front-end development look like in two to three years?)
+
+[//]: # (#### Which of the new frameworks have you tried?)
+
+[//]: # (#### What are your pet projects, maybe you are doing open source?)
+
+[//]: # (#### Do you speak at conferences/meetups?)
+
+[//]: # (#### Do you regularly share professional opinions somewhere, in which communities do you participate?)
+
+[//]: # (#### What podcasts/channels/authors would you recommend?)
+
+[//]: # (#### What new tools have you started using and can you recommend?)
 
 ---
 
