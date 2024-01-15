@@ -10,7 +10,7 @@
 
     <button class="mt-10 z-10">
       <NuxtLink
-          to="/guide/markup"
+          to="/guide/interview-questions"
           class="rounded-md px-3.5 py-2.5 text-white dark:text-gray-900
           bg-primary hover:bg-green-600 dark:bg-primary dark:hover:bg-primary
           flex justify-center items-center"
