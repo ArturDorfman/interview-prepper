@@ -7,7 +7,7 @@ groupId: 'essentials'
 
 ---
 
-### General questions
+### Simple general questions
 #### What is the difference between == and ===?
 The main difference is that '===' checks for equality of both value and type.
 
@@ -162,6 +162,9 @@ It provides a concise syntax for extracting multiple values and assigning them t
     console.log(y); // ReferenceError: y is not defined
     ```
 
+#### What happens if you refer to an element that doesn't exist at index (const arr = ['a', ’b']; console.log(arr[20])?
+In JavaScript, when you try to access an element at an index which does not exist in the array, it will return **undefined**.
+
 #### What are the benefits of including 'use strict' at the beginning of a JavaScript source file?
 The "use strict" directive is used in JavaScript to enable strict mode. This is a set of rules and restrictions designed to make the code more robust, catch common coding errors, and prevent the use of certain error-prone features.
 * **Error catching:** It turns previously silent errors into throw errors.
@@ -220,6 +223,64 @@ Symbols have two main use cases:
 #### Do you know of any ways to detect if an element is in the user's viewport?
 The Intersection Observer API is generally recommended for modern applications.
 
+#### What is the difference between for...of and for...in?
+* The for...of loop: It is used to iterate over the values or elements of an array or iterable objects (like a string).
+
+```javascript
+let array = [1, 2, 3, 4];
+for (let value of array) {
+  console.log(value);  // Outputs: 1, then 2, then 3, then 4
+}
+```
+
+* The for...in loop: It is used to iterate over the properties of an object or the indices of an array.
+
+```javascript
+// For an array
+let array = ['a', 'b', 'c'];
+for (let index in array) {
+  console.log(index);  // Outputs: 0, then 1, then 2
+}
+
+// For an object
+let obj = { a: 1, b: 2 };
+for (let prop in obj) {
+    console.log(prop);  // Outputs: a, then b
+}
+```
+
+### Hard general questions
+#### How do you handle errors in your application?
+#### What are Access Modifiers?
+#### What is type guard?
+#### What is the purpose of creating an abstract class?
+#### What kinds of object models do you know?
+#### What are polyphiles and what are they for?
+#### What are ES6 modules?
+#### How do you use modularity in JavaScript to organize your code?
+#### What approaches do you use to avoid conflicts and ensure code readability and scalability?
+#### How do you optimize and work with animations in the browser? What approaches do you use to achieve high performance and smooth animations?
+#### How do you implement lazy loading of large resources such as images or scripts to optimize page loading? How does this interact with asynchronous code?
+#### How do you use code quality assurance tools like ESLint? How do you define and adhere to code style in a project?
+#### How do you work with architecture and design patterns in JavaScript? What specific patterns do you use to structure your code and make it easier to extend?
+#### How would you implement a percentage preloader on a site that needs to load images, 3D objects, and additional JSON files?
+#### Do you have experience with PWAs?
+#### What are generator functions and what are their practical uses?
+#### How to traverse the Promises array in parallel? And consecutively?
+#### Give examples of implementing the Observer pattern in a browser.
+#### Give examples of scenarios that could lead to a memory leak in client code.
+#### What are Service Workers and in what cases do you use them?
+#### What are Websockets? What are they needed for?
+#### What is the difference between Websockets and Server Send Event?
+#### If any animation on the site is slow (low FPS), how do I know why? What are the reasons?
+#### What code/pattern organization methods do you use and why?
+#### What are the options for storing data on the client?
+#### How would you implement caching on the client? When is it appropriate?
+#### How do you implement authentication and authorization (if any) in your application? How do you handle client-side and server-side security and access rights management?
+#### How do you use code splitting and lazy loading in your code to optimize page and resource loading? How does this affect application performance?
+#### How do you implement automated testing during development? What tools do you use for unit testing, integration testing, and interaction testing?
+#### There is a task to transfer data between two different websites. What are the ways to do this? And if only client side? If we have access to the code of both sites? If one is displayed on another via an iframe? What if we don't have access to one of them?
+
 ---
 
 ### Objects
@@ -257,8 +318,46 @@ A Proxy object wraps another object and intercepts operations, like reading/writ
 
 Details in this [article](https://javascript.info/proxy).
 
-#### What is OOP?
-#### What are the features of object-oriented programming in JavaScript?
+#### What is OOP? What are the features of object-oriented programming in JavaScript?
+Object-oriented programming (OOP) is a design paradigm in software development that uses the concept of "objects," which can contain data and code.
+Objects are instances of classes, which are essentially user-defined data types.
+In object-oriented programs, code is organized around the data it operates on, which is a model that allows for more flexibility and makes code easier to maintain, test, and reuse.
+
+JavaScript supports object-oriented programming, and although it's not a class-based language (it is prototype-based), it can be used to write in an object-oriented style.
+In modern JavaScript or ES6+, we have classes as syntactic sugar over JavaScript's existing prototype-based inheritance.
+
+Here are some features of OOP in JavaScript:
+1. Objects and Prototypes
+   * In JavaScript, objects are key-value pairs. Objects in JavaScript have a hidden link to the prototype object, from which they were created.
+
+2. Classes (ES6+)
+   * JavaScript introduced classes in ES6 as a syntactic sugar for creating constructor functions. It still uses prototypical inheritance under-the-hood.
+
+```javascript
+class Car {
+    constructor(brand) {
+        this.brand = brand;
+    }
+    getBrand() {
+        return this.brand;
+    }
+}
+
+let myCar = new Car("Toyota");
+console.log(myCar.getBrand()); // Outputs "Toyota" 
+```
+
+3. Inheritance (prototypal inheritance)
+   * JavaScript supports single inheritance/prototypal inheritance. Objects can inherit features from other objects.
+
+4. Encapsulation
+   * JavaScript supports encapsulation with the use of var/let/const keywords. ES6 introduced classes and modules, which further support encapsulation.
+
+5. Abstraction
+   * JavaScript uses interfaces (objects) to achieve data abstraction and hide complex implementations from the users.
+
+6. Polymorphism
+   * JavaScript allows methods in an object to take on many forms. In other words, a single method can perform different tasks based on its inputs.
 
 ---
 
@@ -272,16 +371,34 @@ It takes a value of deep for recursion. Default - Infinity
 ---
 
 ### Collections
-#### What is a Map, Set, WeekMap, and WeekSet? When do we need them?
+#### What is a Map, Set, WeekMap, and WeekSet? When do you use them?
 In JavaScript, Map, Set, WeakMap, and WeakSet are built-in objects that provide collections for storing and managing data.
 
-When to use them
-* Use Map when you need to associate keys with values, especially when the keys can be of any data type.
-* Use Set when you need to store a collection of unique values.
-* Use WeakMap and WeakSet when you want to associate data with objects without preventing those objects from being garbage collected.
-They are often used in scenarios where the additional data should be automatically cleaned up when the associated object is no longer needed.
-
+* **WeakMap** is a type of Map where the keys are weakly referenced. If there are no other references to the key object, they can be garbage collected. This avoids memory leaks.
+* **WeakSet** it's a collection of objects where if the object is deleted elsewhere, it can be garbage collected.
 Here are articles with detailed information about [Map, Set](https://javascript.info/map-set) and [WeekMap, WeekSet](https://javascript.info/weakmap-weakset).
+
+Common use cases:
+**Map**
+* Map is used when you want to store key-value pairs where keys could be of any type including objects and functions, not just strings or numbers. This is advantageous over JavaScript objects where keys can only be strings or symbols.
+* When you need to maintain the insertion order of elements. Unlike standard JavaScript objects, iteration over the elements in a Map is in the order of element insertion.
+* When you need to quickly look up keys dynamically inside your code. With Map, key lookup time is a fast O(1) operation. In plain objects, you would have to loop through the property names using Object.keys(), which is less efficient.
+* When you want to easily know the size of your collection. Map has a size property which gives you the number of entries in it, whereas for objects, you'll need to use Object.keys(obj).length.
+
+**Set**
+* Set is used when you want to store unique values of any type. It assures that an element only occurs once in your set.
+* Similar to Map, Set also maintains the order of element insertion. The Set object lets you store unique values of any type, whether primitive values or object references.
+* When you need to frequently check for element existence in your collection. Set provides a fast O(1) has method for this.
+
+**WeakMap**
+* Caching computed results for objects: You may want to associate computation results with objects, but don't want the objects to stay in memory if they're not used elsewhere.
+* Associating private data with objects: WeakMap is used where one wants to extend objects from outside without affecting garbage collection.
+
+**WeakSet**
+* Storing a set of objects, but allowing them to be garbage collected if they are no longer in use.
+* Tracking objects: WeakSet can be used to tag objects, without preventing their garbage collection when they're not referenced any other way.
+
+---
 
 ---
 
@@ -591,48 +708,96 @@ Promise.all() and Promise.allSettled() are designed to handle an array of promis
 
 ### Spread and Rest Operators
 #### What is a spread and rest operators?
+* Spread Operator (...)
+
+The spread operator allows an iterable (like an array or an object) to be expanded in places where zero or
+more arguments (for function calls) or elements (for array literals) are expected,
+or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+
+```javascript
+// example for an array
+let arr1 = [1, 2, 3];
+let arr2 = [...arr1, 4, 5, 6];
+console.log(arr2); // logs [1, 2, 3, 4, 5, 6]
+
+// example for an object
+let obj1 = {a: 'a', b: 'b'};
+let obj2 = {...obj1, c: 'c' };
+console.log(obj2); // logs {a: 'a', b: 'b', c: 'c'}
+```
+
+* Rest Operator (...)
+
+The rest operator, which uses the same ..., does almost the reverse of the spread operator. It allows you to package up elements back into an array.
+Here is how you can use the rest operator in a function's argument:
+
+```javascript
+function sum(...args) {
+  return args.reduce((previous, current) => {
+    return previous + current;
+  });
+}
+console.log(sum(1, 2, 3)); // logs 6
+```
+
+Although both operators use the same ... syntax, their usage and functionality are different depending on the context.
+They are called "spread" when used to expand an iterable like an array or object, and "rest" when capturing the "rest" of the elements into an array.
+
+An article on [javascript.info](https://javascript.info/rest-parameters-spread).
+
 #### Tell us about all the ways to use the '...' operator.
+**Spread Operator in Arrays**
+1. Merge Arrays: Used to merge arrays. The spread operator is used to spread out the elements of an array.
 
-### What happens if you refer to an element that doesn't exist at index (const arr = ['a', ’b']; console.log(arr[20])?
-### What is the difference between for...of and for...in?
+```javascript
+let arr1 = [1, 2, 3];
+let arr2 = [...arr1, 4, 5]; // arr2: [1, 2, 3, 4, 5]
+```
+2. Copy Array: Used to create a copy of an existing array.
 
----
+```javascript
+let arr = [1, 2, 3];
+let arrCopy = [...arr];  // arrCopy: [1, 2, 3]
+```
 
-### When do you use Map and Set?
-### What are Service Workers and in what cases do you use them?
-### What are Websockets? What are they needed for?
-### How do you handle errors in your application?
-### What are Access Modifiers?
-### What is type guard?
-### What is the purpose of creating an abstract class?
-### What kinds of object models do you know?
-### What are polyphiles and what are they for?
-### What are ES6 modules?
-### How do you use modularity in JavaScript to organize your code?
-### What approaches do you use to avoid conflicts and ensure code readability and scalability?
-### How do you optimize and work with animations in the browser? What approaches do you use to achieve high performance and smooth animations?
-### How do you implement lazy loading of large resources such as images or scripts to optimize page loading? How does this interact with asynchronous code?
-### How do you use code quality assurance tools like ESLint? How do you define and adhere to code style in a project?
-### How do you work with architecture and design patterns in JavaScript? What specific patterns do you use to structure your code and make it easier to extend?
-### How would you implement a percentage preloader on a site that needs to load images, 3D objects, and additional JSON files?
-### Do you have experience with PWAs?
-### What are generator functions and what are their practical uses?
+**Spread Operator in Objects**
+* Merge Objects: Used to merge objects, in this case, treat the object as a collection of key-value pairs.
 
----
+```javascript
+let obj1 = {a: 1, b: 2};
+let obj2 = {c: 3};
+let mergedObj = {...obj1, ...obj2}; // mergedObj: {a: 1, b: 2, c: 3}
+```
 
-### How to traverse the Promises array in parallel? And consecutively?
-### Give examples of implementing the Observer pattern in a browser.
-### Give examples of scenarios that could lead to a memory leak in client code.
-### What is the difference between Websockets and Server Send Event?
-### Tell us about Service Workers.
-### How to work with WebSockets to implement two-way communication?
-### If any animation on the site is slow (low FPS), how do I know why? What are the reasons?
-### What code/pattern organization methods do you use and why?
-### What are the options for storing data on the client?
-### How would you implement caching on the client? When is it appropriate?
-### How do you implement authentication and authorization (if any) in your application? How do you handle client-side and server-side security and access rights management?
-### How do you use code splitting and lazy loading in your code to optimize page and resource loading? How does this affect application performance?
-### How do you implement automated testing during development? What tools do you use for unit testing, integration testing, and interaction testing?
-### There is a task to transfer data between two different websites. What are the ways to do this? And if only client side? If we have access to the code of both sites? If one is displayed on another via an iframe? What if we don't have access to one of them?
+* Copy Objects: Used to create a copy of an existing object.
 
----
+```javascript
+let obj = {a: 1, b: 2};
+let objCopy = {...obj}; // objCopy: {a: 1, b: 2}
+```
+
+* Overriding Elements: When spreading two objects that have a common property, the object that's spread later will override the property of the earlier object.
+
+```javascript
+let obj1 = {a: 1, b: 2};
+let obj2 = {b: 100, c: 3};
+let obj3 = {...obj1, ...obj2}; // obj3: {a: 1, b: 100, c: 3}
+```
+
+**Rest Operator**
+* Rest Operator in Function Arguments
+
+```javascript
+const foo = (...args) => {
+  console.log(args);
+}
+foo(1, 2, 3, 4, 5);  // [1, 2, 3, 4, 5]
+```
+
+* Destructuring with Rest Operator: The rest operator, when used during destructuring, allows you to assign the rest of the elements of an object or an array to a particular variable.
+
+```javascript
+let arr = [1, 2, 3, 4, 5];
+let [first, ...rest] = arr;
+console.log(first, rest);  // 1, [2, 3, 4, 5]
+```
