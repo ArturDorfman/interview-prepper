@@ -312,5 +312,36 @@ Article about [Namespace](https://medium.com/@bobjunior542/namespaces-vs-modules
 ### What JavaScript to TypeScript migration strategies do you know?
 Article about [migration strategies](https://2ality.com/2020/04/migrating-to-typescript.html)
 
+### What is the purpose of creating an abstract class?
+Abstract classes in object-oriented programming languages like TypeScript are base classes from which other classes may be derived.
+They may not be instantiated directly.
+
+The main purposes of using abstract classes are:
+1. Code Reusability
+   * Abstract classes allow us to define methods or properties that subclasses should implement or use.
+   This way, we can avoid code duplication and increase the reusability of code.
+
+   ```typescript
+   abstract class Animal {
+     abstract makeSound(): void;
+     move(): void {
+       console.log("Moving...");
+     }
+   }
+   /* Here `move` is a common method that can be used by all subclasses,
+   but makeSound must be implemented individually by each subclass. */
+   ```
+2. Polymorphism
+   * Abstract classes are a key part of polymorphism in object-oriented programming.
+   They allow us to write functions that can work with any class descended from the abstract class.
+   This allows for more flexible and readable code.
+
+3. Design and Structure
+   * Abstract classes are often used to provide an architectural outline of what the classes should look like.
+   They define the contract that the classes have to follow, which leads to more structured and consistent code.
+
+4. Encapsulation
+   * Abstract classes allow us to encapsulate the complexities and just expose the necessary methods and properties to the subclasses.
+
 ### What is the difference between interface and abstract class in Typescript?
 LinkedIn [article](https://www.linkedin.com/pulse/what-difference-between-interface-abstract-class-david-ramazani/) on this theme.

@@ -251,14 +251,93 @@ for (let prop in obj) {
 
 ### Hard general questions
 #### How do you handle errors in your application?
+In JavaScript and TypeScript, we often handle errors using a technique known as "Try...Catch...Finally".
+Sometimes we can use Promises and the .catch() method.
+
 #### What are Access Modifiers?
+Access modifiers are keywords used in object-oriented programming to set the accessibility of objects, classes, variables, methods, or other members.
+Access modifiers define the scope and visibility of a class member.
+
+JavaScript doesn't have built-in support for access modifiers.
+However, it uses closures and immediately invoked function expressions (IIFEs) to restrict access and create private members.
+JavaScript introduced private fields in classes with the ECMAScript 2020 (ES2020) specification by using a # prefix.
+
+```javascript
+class MyClass {
+  #privateField;
+
+  constructor() {
+    this.#privateField = "I'm private field";
+  }
+
+  getPrivateField() {
+    return this.#privateField;
+  }
+}
+
+const instance = new MyClass();
+console.log(instance.getPrivateField()); // Outputs: I'm private field
+console.log(instance.#privateField) // Error. Can't be accessed this way, only like a getter above.
+```
+
+On the other hand, TypeScript, being a statically typed superset of JavaScript, introduces typings along with other features such as access modifiers.
+There are three types of access modifiers in TypeScript:
+
+1. public: The public keyword is used to specify that a class member is publicly accessible throughout any part of the code.
+By default, all members are public in TypeScript.
+2. private: The private keyword is used to specify that a class member can only be accessed from within the class that declares it.
+3. protected: The protected keyword is used to specify that a class member can be accessed from within the class that declares it, or from a subclass.
+
+```typescript
+class Person {
+  public name: string;
+  private age: number;
+  protected gender: string;
+}
+```
+
 #### What is type guard?
-#### What is the purpose of creating an abstract class?
+A type guard is a concept that provides a way to check the type of a variable.
+
 #### What kinds of object models do you know?
-#### What are polyphiles and what are they for?
-#### What are ES6 modules?
-#### How do you use modularity in JavaScript to organize your code?
+1. Document Object Model (DOM)
+   * This is a programming interface for HTML and XML documents.
+   It represents the structure of a document and allows a programming language to manipulate its content, structure, and style.
+
+2. Browser Object Model (BOM)
+   * It allows JavaScript to "talk to" a web browser.
+
+#### What is the polyfill and what is this for?
+A Polyfill is a piece of code (usually JavaScript) used to provide modern functionality on older browsers that do not natively support it.
+
+#### What are ES6 modules? How do you use modularity in JavaScript to organize your code?
+ES6, or ECMAScript 2015, introduces a standardized module format to JavaScript.
+Before ES6, JavaScript didn't have a built-in module system, so developers had to use libraries or other methods to include separate files.
+
+In ES6 Modules:
+1. Code can be organized into separate files, each one exporting a single part or multiple parts, such as a class, function, or object.
+2. Each module is a piece of code that is executed once it is loaded.
+3. A module can import functionality from other modules and use them. It allows importing of functions, objects or primitive values and can also export them to be used by other modules.
+
+Here is an example of code organization.
+```javascript
+// myModule.js
+export function myFunction() { 
+  // function body
+}
+export const myVariable = 'variable value';
+
+// anotherModule.js
+import { myFunction, myVariable } from './myModule';
+```
+
 #### What approaches do you use to avoid conflicts and ensure code readability and scalability?
+Here are some approaches to avoid conflicts, improve code readability, and ensure scalability:
+1. Code conventions/standards
+2. Code Review
+3. Automated Testing
+4. Commenting and Documentation
+
 #### How do you optimize and work with animations in the browser? What approaches do you use to achieve high performance and smooth animations?
 #### How do you implement lazy loading of large resources such as images or scripts to optimize page loading? How does this interact with asynchronous code?
 #### How do you use code quality assurance tools like ESLint? How do you define and adhere to code style in a project?
