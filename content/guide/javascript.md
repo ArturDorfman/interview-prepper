@@ -354,34 +354,48 @@ Optimizing animations in the browser involves several considerations, which I wi
    that the browser call a specified function to update an animation before the next repaint.
    It's more efficient because it allows the browser to optimize the animations, resulting in smoother animations.
 
-3. Avoid animating properties that cause reflow or repaint
-   * Try to stick to the following properties for animations: transform (translate, scale, rotate) and opacity.
-   Animating these properties triggers hardware acceleration and does not cause layout changes,
-   which leads to better performance.
-
-4. Use the will-change property to inform the browser of an element's animation in advance
-   * This lets the browser prepare for the animation and can optimize it before it occurs.
-   However, it should be used sparingly as it can also lead to performance issues if overused.
-
-5. Use window.performance for measuring time in animations
+3. Use window.performance for measuring time in animations
    * The high-resolution Time API of window.performance now enables you to measure time in milliseconds,
    allowing you to get more precise animation timing which results in a smoother experience.
 
-6. Use debounce/throttle for functions that you run during the animations
+4. Use debounce/throttle for functions that you run during the animations
    * If you have to use scroll or resize events to control the animation, make sure to throttle or debounce them to increase performance.
 
-7. Be mindful of mobile
+5. Be mindful of mobile
    * If you're developing for mobile devices, remember that they have less power than desktop machines.
    Make sure to test your animations on a variety of devices to ensure they perform well.
 
-8. Use web workers for complex calculations
+6. Use web workers for complex calculations
    * If there are complex calculations in your animations, move them to web workers if possible.
    Web workers run on a separate thread, which means your calculations won't interrupt the user interface.
 
-9. Use tools to measure
+7. Use tools to measure
    * Lastly, use tools such as Chrome's DevTools Performance panel to measure the performance of your animations and find bottlenecks or performance issues.
 
 #### How do you implement lazy loading of large resources such as images or scripts to optimize page loading? How does this interact with asynchronous code?
+To implement lazy loading of large resources like images or scripts, there are generally two methods:
+one that uses Intersection Observer API, and another that uses the loading attribute.
+Both methods help in significantly reducing initial load time on your webpage.
+
+1. Using Intersection Observer API
+   * The Intersection Observer API allows us to detect when an element enters or leaves the viewport.
+   By combining this tool with JavaScript, we can dynamically load resources when they come into view.
+
+2. Using Loading Attribute
+   * In modern browsers, you can use the loading attribute to lazy load images without the need of JavaScript.
+   It’s cleaner and simpler, but keep in mind, at the time of writing, it doesn't work in all browsers.
+   
+   ```javascript
+   <img src="large-image.jpg" loading="lazy">
+   <script src="large-script-file.js" async></script>
+   // or
+   <script src="large-script-file.js" defer></script>
+   ```
+
+   * These attributes change the way the script is loaded and run:
+     * async: The script is run as soon as it's finished downloading, without blocking the parsing of the HTML document.
+     * defer: The script is run only after the entire HTML document has been parsed.
+
 #### How do you use code quality assurance tools like ESLint? How do you define and adhere to code style in a project?
 #### How do you work with architecture and design patterns in JavaScript? What specific patterns do you use to structure your code and make it easier to extend?
 #### How would you implement a percentage preloader on a site that needs to load images, 3D objects, and additional JSON files?
@@ -580,6 +594,7 @@ Functional programming can be simply explained by following these two laws in yo
     
     recurse(1, 10); // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
     ```
+
    * [Currying](https://javascript.info/currying-partials) in Functional Programming
      * The big benefit of currying is when you need to re-use the same function multiple times but only change one (or fewer) of the parameters.
     ```javascript
