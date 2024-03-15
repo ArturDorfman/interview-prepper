@@ -18,7 +18,8 @@ This operator is used for converting some value to a boolean.
 ' ', 0, null, undefined, NaN, false.
 
 #### What is ‘??’ and why can it be useful?
-This is a ‘nullish coalescing operator’. It provides a way to provide a default value for a variable if its current value is null or undefined.
+This is a ‘nullish coalescing operator.’
+It provides a way to provide a default value for a variable if its current value is null or undefined.
 
 #### List data types in JS.
 JavaScript has several primitive data types and one complex data type.
@@ -67,7 +68,7 @@ let person = {
 }
 ```
 
-#### What is the difference between var, let, and const. In what cases should be used?
+#### What is the difference between var, let, and const? In what cases should be used?
 A table summary showing the differences between these keywords.
 
 | KEYWORD   | SCOPE                  | REDECLARATION & REASSIGNMENT   | HOISTING                     |
@@ -78,16 +79,17 @@ A table summary showing the differences between these keywords.
 
 Good explanation in [article](https://www.freecodecamp.org/news/differences-between-var-let-const-javascript/) on freeCodeCamp or on the [video](https://www.youtube.com/watch?v=Gd_JG3e1g4A&ab_channel=DeeecodeTheWeb) as well.
 
-#### What is variable scope (other name is a lexical environment)?
+#### What is variable scope (another name is a lexical environment)?
 An [article](https://www.freecodecamp.org/news/scope-in-javascript-global-vs-local-vs-block-scope/) on freeCodeCamp gives a good understanding of scopes.
 
 #### Is it possible to override const?
-We can't override const if it is a primitive.
+We can't override const if it is primitive.
 ```javascript
 const myNumber = 10;
 myNumber = 20; // This will result in an error
 ```
-The only exception is a case when we store some object or array. In this case we can override property from it.
+
+The only exception is a case when we store some object or array. In this case, we can override property from it.
 ```javascript
 const myArray = [1, 2, 3];
 myArray[0] = 4; // This is allowed
@@ -185,7 +187,7 @@ function changeText() {
 }
 ```
 
-#### What is Symbol? What is its practical application?
+#### What is the Symbol? What is its practical application?
 Symbols are a powerful addition to JavaScript, providing a way to create unique identifiers and hidden properties, contributing to better code organization and reducing the risk of naming conflicts.
 
 Symbols have two main use cases:
@@ -251,7 +253,7 @@ for (let prop in obj) {
 
 ### Hard general questions
 #### How do you handle errors in your application?
-In JavaScript and TypeScript, we often handle errors using a technique known as "Try...Catch...Finally".
+In JavaScript and TypeScript, we often handle errors using a technique known as "Try...Catch...Finally."
 Sometimes we can use Promises and the .catch() method.
 
 #### What are Access Modifiers?
@@ -280,7 +282,8 @@ console.log(instance.getPrivateField()); // Outputs: I'm private field
 console.log(instance.#privateField) // Error. Can't be accessed this way, only like a getter above.
 ```
 
-On the other hand, TypeScript, being a statically typed superset of JavaScript, introduces typings along with other features such as access modifiers.
+On the other hand, TypeScript, being a statically typed superset of JavaScript, 
+introduces typing along with other features such as access modifiers.
 There are three types of access modifiers in TypeScript:
 
 1. public: The public keyword is used to specify that a class member is publicly accessible throughout any part of the code.
@@ -297,7 +300,7 @@ class Person {
 ```
 
 #### What is type guard?
-A type guard is a concept that provides a way to check the type of a variable.
+A type guard is a concept that provides a way to check the type of variable.
 
 #### What kinds of object models do you know?
 1. Document Object Model (DOM)
@@ -339,6 +342,45 @@ Here are some approaches to avoid conflicts, improve code readability, and ensur
 4. Commenting and Documentation
 
 #### How do you optimize and work with animations in the browser? What approaches do you use to achieve high performance and smooth animations?
+Optimizing animations in the browser involves several considerations, which I will highlight:
+1. Use CSS3 animations instead of JavaScript animations where possible
+   * CSS-based animations typically run on the composite layer,
+   which means they can be hardware accelerated and end up being smoother.
+   They also give better performance than JavaScript-based animations.
+   For example, using transitions and transforms in CSS.
+
+2. Use the requestAnimationFrame() method for JavaScript animations
+   * This function tells the browser that you wish to perform an animation and requests
+   that the browser call a specified function to update an animation before the next repaint.
+   It's more efficient because it allows the browser to optimize the animations, resulting in smoother animations.
+
+3. Avoid animating properties that cause reflow or repaint
+   * Try to stick to the following properties for animations: transform (translate, scale, rotate) and opacity.
+   Animating these properties triggers hardware acceleration and does not cause layout changes,
+   which leads to better performance.
+
+4. Use the will-change property to inform the browser of an element's animation in advance
+   * This lets the browser prepare for the animation and can optimize it before it occurs.
+   However, it should be used sparingly as it can also lead to performance issues if overused.
+
+5. Use window.performance for measuring time in animations
+   * The high-resolution Time API of window.performance now enables you to measure time in milliseconds,
+   allowing you to get more precise animation timing which results in a smoother experience.
+
+6. Use debounce/throttle for functions that you run during the animations
+   * If you have to use scroll or resize events to control the animation, make sure to throttle or debounce them to increase performance.
+
+7. Be mindful of mobile
+   * If you're developing for mobile devices, remember that they have less power than desktop machines.
+   Make sure to test your animations on a variety of devices to ensure they perform well.
+
+8. Use web workers for complex calculations
+   * If there are complex calculations in your animations, move them to web workers if possible.
+   Web workers run on a separate thread, which means your calculations won't interrupt the user interface.
+
+9. Use tools to measure
+   * Lastly, use tools such as Chrome's DevTools Performance panel to measure the performance of your animations and find bottlenecks or performance issues.
+
 #### How do you implement lazy loading of large resources such as images or scripts to optimize page loading? How does this interact with asynchronous code?
 #### How do you use code quality assurance tools like ESLint? How do you define and adhere to code style in a project?
 #### How do you work with architecture and design patterns in JavaScript? What specific patterns do you use to structure your code and make it easier to extend?
@@ -388,7 +430,7 @@ Object.freeze() and Object.seal() are methods that allow you to control the muta
 The ‘new’ keyword is used to create an instance of an object that is defined by a constructor function.
 
 #### What is a prototype in JavaScript?
-In JavaScript, a prototype is an internal, hidden property of objects that is used for inheritance.
+In JavaScript, a prototype is an internal, hidden property of objects that are used for inheritance.
 Every object in JavaScript is associated with a prototype object, which acts as a blueprint for the object.
 This prototype object itself may have another prototype, forming a prototype chain.
 
@@ -412,19 +454,19 @@ Here are some features of OOP in JavaScript:
 2. Classes (ES6+)
    * JavaScript introduced classes in ES6 as a syntactic sugar for creating constructor functions. It still uses prototypical inheritance under-the-hood.
 
-```javascript
-class Car {
-    constructor(brand) {
-        this.brand = brand;
+    ```javascript
+    class Car {
+        constructor(brand) {
+            this.brand = brand;
+        }
+        getBrand() {
+            return this.brand;
+        }
     }
-    getBrand() {
-        return this.brand;
-    }
-}
-
-let myCar = new Car("Toyota");
-console.log(myCar.getBrand()); // Outputs "Toyota" 
-```
+    
+    let myCar = new Car("Toyota");
+    console.log(myCar.getBrand()); // Outputs "Toyota" 
+    ```
 
 3. Inheritance (prototypal inheritance)
    * JavaScript supports single inheritance/prototypal inheritance. Objects can inherit features from other objects.
@@ -445,7 +487,7 @@ console.log(myCar.getBrand()); // Outputs "Toyota"
 There are many methods of array. Here are the most commonly used forEach, map, reduce, filter, some, every, flat, flatMap, find etc.
 
 #### What takes and what default value for flat()?
-It takes a value of deep for recursion. Default - Infinity
+It takes a value of deep for recursion. Default—Infinity
 
 ---
 
@@ -459,14 +501,14 @@ Here are articles with detailed information about [Map, Set](https://javascript.
 
 Common use cases:
 **Map**
-* Map is used when you want to store key-value pairs where keys could be of any type including objects and functions, not just strings or numbers. This is advantageous over JavaScript objects where keys can only be strings or symbols.
+* Map is used when you want to store key-value pairs where keys could be of any type including objects and functions, not just strings or numbers. This is useful over JavaScript objects where keys can only be strings or symbols.
 * When you need to maintain the insertion order of elements. Unlike standard JavaScript objects, iteration over the elements in a Map is in the order of element insertion.
 * When you need to quickly look up keys dynamically inside your code. With Map, key lookup time is a fast O(1) operation. In plain objects, you would have to loop through the property names using Object.keys(), which is less efficient.
 * When you want to easily know the size of your collection. Map has a size property which gives you the number of entries in it, whereas for objects, you'll need to use Object.keys(obj).length.
 
 **Set**
 * Set is used when you want to store unique values of any type. It assures that an element only occurs once in your set.
-* Similar to Map, Set also maintains the order of element insertion. The Set object lets you store unique values of any type, whether primitive values or object references.
+* Similar to the Map, the Set also maintains the order of element insertion. The Set object lets you store unique values of any type, whether primitive values or object references.
 * When you need to frequently check for element existence in your collection. Set provides a fast O(1) has method for this.
 
 **WeakMap**
@@ -475,7 +517,7 @@ Common use cases:
 
 **WeakSet**
 * Storing a set of objects, but allowing them to be garbage collected if they are no longer in use.
-* Tracking objects: WeakSet can be used to tag objects, without preventing their garbage collection when they're not referenced any other way.
+* Tracking objects: WeakSet can be used to tag objects without preventing their garbage collection when they're not referenced any other way.
 
 ---
 
@@ -483,8 +525,8 @@ Common use cases:
 
 ### Functions
 #### What is an anonymous function and what are they used for?
-In JavaScript, an anonymous function is a function that is defined without a name.
-This function type in case where we have not to name specific function.
+In JavaScript, an anonymous function is a function defined without a name.
+This function type in case where we have not to name a specific function.
 We can use function expression syntax and save anonymous function in variable.
 Also, we can use anonymous function as a callback.
 
@@ -499,18 +541,21 @@ Arrow function is another way to declare function. It has some specifics, like:
 #### What is functional programming?
 [Functional programming](https://www.freecodecamp.org/news/functional-programming-in-javascript/) is a sub-paradigm from the Declarative paradigm, this affects the way you write functional code.
 It generally leads to less code, because JavaScript already has a lot of the in-built functions you commonly need.
-It also allows you to abstract away a lot (you don't have to understand in depth how something gets done), you just call a function that does it for you.
+It also allows you to abstract away a lot (you don't have to understand in depth how something gets done), you call a function that does it for you.
 
-Functional programming can be simply explained by following these 2 laws in your code:
+Functional programming can be simply explained by following these two laws in your code:
 1. Architect your software out of pure, isolated functions
    * **Pure functions**. The same input always gives the same output (idempotence), and has no side effects.
-   An idempotent function, is one that, when you reapply the results to that function again, doesn't produce a different result.
+   An idempotent function is one that, when you reapply the results to that function again, doesn't produce a different result.
    * **Isolated functions**. There is no dependence on the state of the program, which includes global variables that are subject to change.
    Anything that you need should be passed into the function as an argument.
-   * **Reusability through Higher order functions**. A higher order function is a function that either take a function as an argument, returns a function, or both!
-     The in-built JavaScript Array functions .map, .reduce, and .filter all accept a function. They are excellent examples of higher order functions, as they iterate over an array and call the function they received for each item in the array.
+   * **Reusability through Higher order functions**.
+   A higher order function is a function that either takes a function as an argument, returns a function, or both!
+   The in-built JavaScript Array functions .map, .reduce, and .filter all accept a function.
+   They are excellent examples of higher order functions,
+   as they iterate over an array and call the function they received for each item in the array.
 
-2. Avoid mutability and side-effects
+2. Avoid mutability and side effects
    * **Make your code referentially [transparent](https://medium.com/@olxc/referential-transparency-93352c2dd713)**.
    That is, your function calls can be replaced with the values that they represent without affecting the result.
     ```javascript
@@ -553,7 +598,7 @@ Functional programming can be simply explained by following these 2 laws in your
 
    * [Partial application](https://www.linkedin.com/advice/0/how-can-you-use-partial-application-functional-qcphc) in Functional Programming
    * Function composition in Functional Programming
-     * Here some articles that explain this aspect. [Medium](https://medium.com/@akhilanand.ak01/function-composition-in-javascript-exploring-the-power-of-compose-4114da8b9875), [Dev](https://dev.to/biomathcode/composition-of-functions-178g).
+     * Here are some articles that explain this aspect. [Medium](https://medium.com/@akhilanand.ak01/function-composition-in-javascript-exploring-the-power-of-compose-4114da8b9875), [Dev](https://dev.to/biomathcode/composition-of-functions-178g).
 
 ---
 
@@ -563,7 +608,7 @@ Event propagation, bubbling, delegation, and preventing are all concepts related
 1. Event Propagation
    * Event propagation refers to the process by which events are transmitted or passed through the DOM hierarchy.
    * There are two phases of event propagation: capturing phase and bubbling phase.
-An article that explain [capturing phase and bubbling phase](https://javascript.info/bubbling-and-capturing).
+An article that explains [capturing phase and bubbling phase](https://javascript.info/bubbling-and-capturing).
 
 2. Capturing Phase
    * During the capturing phase, the browser traverses down from the root of the DOM tree to the target element.
@@ -579,7 +624,7 @@ An article that explain [capturing phase and bubbling phase](https://javascript.
 
 5. Event Delegation
    * Event delegation is a design pattern that takes advantage of event propagation to handle events efficiently.
-   * Instead of attaching an event listener to each individual element, you can attach a single event listener to a common ancestor.
+   * Instead of attaching an event listener to each element, you can attach a single event listener to a common ancestor.
    * When an event occurs, it will bubble up to the common ancestor, and you can check the target of the event to determine which specific element triggered the event.
 Detailed explanation of [event delegation](https://javascript.info/event-delegation) on javascript.info or an article on [freeCodeCamp](https://www.freecodecamp.org/news/event-delegation-javascript/).
 
@@ -619,8 +664,9 @@ An article about Closure on [javascript.info](https://javascript.info/closure).
 ---
 
 ### Context
-#### What is a context? How can I change the execution context of a function?
-Execution Context is the management of what is currently running. We can change the execution context of a function with help of call, apply, and bind methods.
+#### What is the context? How can I change the execution context of a function?
+Execution Context is the management of what is currently running.
+We can change the execution context of a function with the help of call, apply, and bind methods.
 
 #### What are three ways to bind a specific object to the “this” value of the called function and the difference between them?
 * **‘[Call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)’** is a function that helps you change the context of the invoking function.
@@ -677,7 +723,7 @@ Details in this [article](https://www.freecodecamp.org/news/understand-call-appl
 #### What is an event loop? How does it work?
 [Event Loop](https://javascript.info/event-loop) is a crucial part of the runtime environment, responsible for managing and processing events.
 The event loop enables JavaScript to be non-blocking and asynchronous, allowing it to handle multiple operations simultaneously without waiting for one to finish before moving on to the next.
-The event loop concept is very simple. There’s an endless loop, where the JavaScript engine waits for tasks, executes them and then sleeps, waiting for more tasks.
+The event loop concept is basic. There’s an endless loop, where the JavaScript engine waits for tasks, executes them and then sleeps, waiting for more tasks.
 
 The general algorithm of the engine:
 
@@ -704,7 +750,7 @@ Here's a step-by-step breakdown:
 * Once the call stack is empty, the event loop takes the first callback from the queue and pushes it onto the stack.
 * The callback is executed, and the process repeats.
 
-Here a very extensive explanation about Event Loop on [UlbiTV](https://www.youtube.com/watch?v=zDlg64fsQow&ab_channel=UlbiTV).
+Here is a very extensive explanation about Event Loop on [UlbiTV](https://www.youtube.com/watch?v=zDlg64fsQow&ab_channel=UlbiTV).
 
 ---
 
@@ -719,12 +765,12 @@ In JavaScript, an async function returns a promise. We can catch an error with t
 ‘async’ and ‘await’ are keywords used in asynchronous programming to simplify working with promises.
 
 #### How do you work with asynchronous code in JavaScript without using async/await? What other approaches are you considering for working with asynchronous?
-We can handle async code with several ways without async/await. Here are examples:
+We can handle async code in several ways without async/await. Here are examples:
 1. Callbacks, also known as 'callback hell'
-2. Promises - modern way to handle async code. 
+2. Promises—modern way to handle async code. 
 
 #### What is a Callback Hell? Give an example.
-[Callback Hell](https://www.geeksforgeeks.org/what-to-understand-callback-and-callback-hell-in-javascript/) is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code.
+[Callback Hell](https://www.geeksforgeeks.org/what-to-understand-callback-and-callback-hell-in-javascript/) is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends on/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code.
 
 ```javascript
 let words = document.querySelectorAll(".word");
@@ -780,7 +826,7 @@ Promise.all() and Promise.allSettled() are designed to handle an array of promis
 
 * Promise.allSettled()
   * The result promise of Promise.allSettled() is fulfilled with an array of objects representing the outcome of each promise.
-  Each object has a status property that is either "fulfilled" or "rejected", and a value or reason property, depending on whether the promise was fulfilled or rejected.
+  Each object has a status property that is either "fulfilled" or "rejected," and a value or reason property, depending on whether the promise was fulfilled or rejected.
   It waits for all promises to settle (either fulfill or reject) before fulfilling its own promise.
 
 ---
@@ -824,20 +870,22 @@ They are called "spread" when used to expand an iterable like an array or object
 
 An article on [javascript.info](https://javascript.info/rest-parameters-spread).
 
-#### Tell us about all the ways to use the '...' operator.
+#### Tell us about all the ways to use the '...' Operator.
 **Spread Operator in Arrays**
-1. Merge Arrays: Used to merge arrays. The spread operator is used to spread out the elements of an array.
+1. Merge Arrays
+   * Used to merge arrays. The spread operator is used to spread out the elements of an array.
+    ```javascript
+    let arr1 = [1, 2, 3];
+    let arr2 = [...arr1, 4, 5]; // arr2: [1, 2, 3, 4, 5]
+    ```
 
-```javascript
-let arr1 = [1, 2, 3];
-let arr2 = [...arr1, 4, 5]; // arr2: [1, 2, 3, 4, 5]
-```
-2. Copy Array: Used to create a copy of an existing array.
+2. Copy Array
+   * Used to create a copy of an existing array.
 
-```javascript
-let arr = [1, 2, 3];
-let arrCopy = [...arr];  // arrCopy: [1, 2, 3]
-```
+    ```javascript
+    let arr = [1, 2, 3];
+    let arrCopy = [...arr];  // arrCopy: [1, 2, 3]
+    ```
 
 **Spread Operator in Objects**
 * Merge Objects: Used to merge objects, in this case, treat the object as a collection of key-value pairs.
@@ -855,7 +903,7 @@ let obj = {a: 1, b: 2};
 let objCopy = {...obj}; // objCopy: {a: 1, b: 2}
 ```
 
-* Overriding Elements: When spreading two objects that have a common property, the object that's spread later will override the property of the earlier object.
+* Overriding Elements: When spreading two objects that have a common property, the object spread later will override the property of the earlier object.
 
 ```javascript
 let obj1 = {a: 1, b: 2};
