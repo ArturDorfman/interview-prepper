@@ -396,25 +396,235 @@ Both methods help in significantly reducing initial load time on your webpage.
      * async: The script is run as soon as it's finished downloading, without blocking the parsing of the HTML document.
      * defer: The script is run only after the entire HTML document has been parsed.
 
-#### How do you use code quality assurance tools like ESLint? How do you define and adhere to code style in a project?
 #### How do you work with architecture and design patterns in JavaScript? What specific patterns do you use to structure your code and make it easier to extend?
+
 #### How would you implement a percentage preloader on a site that needs to load images, 3D objects, and additional JSON files?
-#### Do you have experience with PWAs?
+A general idea of how we could implement a preloader on a site.
+1. Setup a preloader view
+   * This could be a simple div element in your index.html file with a progress bar (or other graphical representation) and some CSS to make it visually appealing.
+   ```javascript
+   <div id="preloader">
+     <div id="loader"></div>
+   </div>
+   ```
+
+2. Implement a load manager
+   * We need a resource manager to manage all loading tasks and calculate the percentage of loaded resources.
+   Here you can use a library like three.js's LoadingManager.
+   ```javascript
+   const manager = new THREE.LoadingManager()
+   ```
+   
+3. Handling the progress
+   * LoadingManager has an onProgress event which you can listen to and update your preloader view accordingly.
+   ```javascript
+   manager.onProgress = function ( item, loaded, total ) {
+    const progress = loaded / total
+    updateProgressBar(progress)
+   }
+   ```
+   
+4. Update the progress sight
+   * Here's a simple function that updates the loader div's width according to the progress.
+   ```javascript
+   function updateProgressBar(progress) {
+     const loaderElement = document.querySelector('#loader')
+     loaderElement.style.width = (progress * 100) + '%'
+   
+     if ( progress === 1 ) {
+       // remove preloader, make sure you're doing this after the loading
+       // is complete and not the moment progress hits 1 to prevent FOUC
+       loaderElement.parentElement.style.display = 'none'
+     }
+   }
+   ```
+   
+5. Load assets with manager
+   * Load your assets (images, 3D objects and JSON files) using loaders that capable of handling those files.
+   For images, use ImageLoader, for 3D objects, use related loaders like ObjectLoader, FBXLoader etc.
+   and JSONLoader for JSON Files.
+   ```javascript
+   // For Images.
+   const imageLoader = new THREE.ImageLoader(manager)
+   imageLoader.load('path/to/image.png', function ( image ) {
+     // use the loaded image
+   })
+   
+   // For 3D Objects.
+   const objectLoader = new THREE.FBXLoader(manager)
+   objectLoader.load('path/to/object.fbx', function ( object ) {
+     // use the loaded object
+   })
+   
+   // For JSON files.
+   const jsonLoader = new THREE.FileLoader(manager)
+   jsonLoader.load('path/to/file.json', function ( json ) {
+     const actual_JSON = JSON.parse(json)
+     // use the loaded json data
+   })
+   ```
+
 #### What are generator functions and what are their practical uses?
+**Basic Concept**
+Generator functions are a special kind of function in JavaScript
+that allow you to pause and resume execution at any point.
+This feature is made possible by the yield keyword.
+
+Generator functions are defined with the function* syntax.
+```javascript
+function* generatorFunction() {
+  console.log('This will be executed first.');
+  yield 'Hello, '
+  
+  console.log('I will not print this until the second next() is called.');
+  yield 'World!'
+}
+```
+
+To start executing a generator function, you need to call it, this returns a generator object.
+Its execution is paused at the start of the function.
+To resume execution, call next() on the generator object.
+
+```javascript
+const generatorObject = generatorFunction()
+console.log(generatorObject.next().value) // 'Hello, '
+console.log(generatorObject.next().value) // 'World!'
+console.log(generatorObject.next().value) // undefined
+```
+
+**Practical Uses**
+Generator functions can be used in a variety of scenarios, such as:
+1. Asynchronous Programming
+   * Generators can make asynchronous code look and behave a little more like synchronous code.
+   This can be incredibly useful when dealing with callback-based APIs or Promises.
+
+2. Iteration
+   * Generators are iterable, and can thus be used wherever an iterable is expected.
+   They can be used to define custom, possibly infinite data structures that can be used in "for...of"
+   loops or with the spread operator "...".
+
+3. Infinite sequences
+   * With generators, you can create code that provides values for an iteration one at a time, on-demand,
+   for an infinitely large sequence of results.
+
+4. Coroutines and concurrency
+   * Generators can also be used to manage concurrency in ways that callbacks and promises cannot.
+   For example, they can be used to manage interleaved execution of multiple tasks.
+
+5. Complex data transformation pipelines
+   * Generators can also be used to create complex data transformation pipelines
+   where data is processed in a series of steps, with each step potentially requiring asynchronous operations.
+
+More details [here](https://javascript.info/generators).
+
 #### How to traverse the Promises array in parallel? And consecutively?
-#### Give examples of implementing the Observer pattern in a browser.
+**Executing Promises In Parallel**
+1. Promise.all()
+2. Promise.allSettled()
+
+**Executing Promises In Sequence**
+If you want to execute promises consecutively, you can use Array.prototype.reduce().
+This method applies a function against an accumulator and each value of the array
+(l-r) to reduce it to a single value.
+
+```javascript
+const promises = [Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)];
+
+promises.reduce((chain, promise) => {
+   return chain.then(chainResults => promise.then(currentResult => [...chainResults, currentResult]))
+}, Promise.resolve([])).then(arrayOfResults => {
+   console.log(arrayOfResults)
+})
+```
+
 #### Give examples of scenarios that could lead to a memory leak in client code.
-#### What are Service Workers and in what cases do you use them?
-#### What are Websockets? What are they needed for?
-#### What is the difference between Websockets and Server Send Event?
+1. Global Variables
+   * If you keep adding properties to the global objects, then you can cause a memory leak.
+
+2. Timer or Interval callbacks
+   * Anytime you setup a repeat-action like a setInterval, you can cause a memory leak if you forget to clear it.
+
+3. Closures
+   * Closures can cause memory leaks if they reference a scope that contains variables that use a large amount of memory.
+   As long as the closure exists, those variables remain in memory.
+
+4. Not removing Event Listeners
+   * DOM event listeners can cause a memory leak if they are not removed before a DOM element is removed from the application.
+
 #### If any animation on the site is slow (low FPS), how do I know why? What are the reasons?
+There are a number of reasons why animations on a site might be slow or have low FPS (Frames Per Second).
+Here are some common causes:
+1. Complex CSS Animations or Transitions
+   * If the CSS animation or transition is complex and involves many properties, it could make the page render slowly.
+
+2. Large Images or Videos
+   * Media files that are not optimized put a heavy load on the network and can cause animations to stutter.
+
+3. Unoptimized Code
+   * Inefficient algorithms or long-running computations can slow down the browser's main thread,
+   where both JavaScript and layout calculations are performed.
+
+4. Memory Leaks
+   * These occur when unnecessary memory is consumed by an application due to improper garbage collection, causing the system to slow down over time.
+
+5. Hardware Limitations
+   * End user's device capabilities may also affect the performance of animations.
+
 #### What code/pattern organization methods do you use and why?
+Usually I use such approaches:
+1. Modularization
+   * This involves structuring code into independent modules, where each module handles a distinct functionality.
+   This helps maintain the codebase easily, enables code reusability, and simplifies testing.
+
+2. Object-Oriented Programming (OOP)
+   * In this approach, code is organized around objects and data rather than actions and logic.
+   This promotes better organization of code, modularity, and promotes encapsulation, inheritance, and polymorphism.
+
+3. Functional Programming
+   * It involves writing programs that avoid shared state, mutable data, and side effects. This results in fewer bugs and easier maintenance.
+
 #### What are the options for storing data on the client?
+Storing data on the client-side can be done using several methods:
+1. Cookies
+2. LocalStorage
+3. SessionStorage
+4. IndexedDB
+
 #### How would you implement caching on the client? When is it appropriate?
-#### How do you implement authentication and authorization (if any) in your application? How do you handle client-side and server-side security and access rights management?
-#### How do you use code splitting and lazy loading in your code to optimize page and resource loading? How does this affect application performance?
-#### How do you implement automated testing during development? What tools do you use for unit testing, integration testing, and interaction testing?
-#### There is a task to transfer data between two different websites. What are the ways to do this? And if only client side? If we have access to the code of both sites? If one is displayed on another via an iframe? What if we don't have access to one of them?
+Caching can be implemented on the client side in multiple ways.
+The exact method used often depends on the specific requirements of your application, 
+but here are a few general techniques:
+1. HTTP / Web Caching
+   * Browsers automatically cache files requested via HTTP protocol using cache headers like Etag,
+   Cache-Control and Last-Modified.
+   You can specify cache expiration behavior for your resources (static files, images, etc.)
+   on the server side and client (browser) will follow these rules.
+
+2. LocalStorage / SessionStorage
+   * These storage options can be used for caching application data on client side.
+   You can store more permanent data in LocalStorage (for data you want persisted across multiple sessions) while SessionStorage (only persists data for current session) can be used for temporary data.
+
+3. IndexedDB
+   * For more structured and data-intensive applications, IndexedDB can be used for client-side caching.
+   It allows storage of larger amounts of data than LocalStorage.
+
+4. Service Workers
+   * Service workers can handle caching more effectively for offline web applications.
+   They can cache network requests, serve app-shell and static resources from cache, etc.
+   You can setup a caching strategy like NetworkFirst, CacheFirst, StaleWhileRevalidate etc.
+
+When is it appropriate
+1. Offline Compatibility
+   * Where web application needs to work offline, caching resources and data using Service Workers or LocalStorage is beneficial.
+
+2. Performance
+   * To reduce network requests and provide faster access to resources, client side caching can be implemented.
+
+3. Persist User Data
+   * If you want to save user settings/preferences to make them available across different sessions.
+
+4. Rate Limiting / API Costs
+   * If your API or a Third party API has rate limits or costs associated with the number of calls.
 
 ---
 
@@ -896,7 +1106,6 @@ An article on [javascript.info](https://javascript.info/rest-parameters-spread).
 
 2. Copy Array
    * Used to create a copy of an existing array.
-
     ```javascript
     let arr = [1, 2, 3];
     let arrCopy = [...arr];  // arrCopy: [1, 2, 3]
@@ -904,7 +1113,6 @@ An article on [javascript.info](https://javascript.info/rest-parameters-spread).
 
 **Spread Operator in Objects**
 * Merge Objects: Used to merge objects, in this case, treat the object as a collection of key-value pairs.
-
 ```javascript
 let obj1 = {a: 1, b: 2};
 let obj2 = {c: 3};
@@ -912,14 +1120,12 @@ let mergedObj = {...obj1, ...obj2}; // mergedObj: {a: 1, b: 2, c: 3}
 ```
 
 * Copy Objects: Used to create a copy of an existing object.
-
 ```javascript
 let obj = {a: 1, b: 2};
 let objCopy = {...obj}; // objCopy: {a: 1, b: 2}
 ```
 
 * Overriding Elements: When spreading two objects that have a common property, the object spread later will override the property of the earlier object.
-
 ```javascript
 let obj1 = {a: 1, b: 2};
 let obj2 = {b: 100, c: 3};
@@ -928,16 +1134,12 @@ let obj3 = {...obj1, ...obj2}; // obj3: {a: 1, b: 100, c: 3}
 
 **Rest Operator**
 * Rest Operator in Function Arguments
-
 ```javascript
-const foo = (...args) => {
-  console.log(args);
-}
+const foo = (...args) => (console.log(args))
 foo(1, 2, 3, 4, 5);  // [1, 2, 3, 4, 5]
 ```
 
 * Destructuring with Rest Operator: The rest operator, when used during destructuring, allows you to assign the rest of the elements of an object or an array to a particular variable.
-
 ```javascript
 let arr = [1, 2, 3, 4, 5];
 let [first, ...rest] = arr;
