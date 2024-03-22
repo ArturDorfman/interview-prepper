@@ -11,7 +11,7 @@ groupId: 'frameworks and libraries'
 #### What is a Composition API in Vue 3?
 #### What is an interpolation?
 #### What is a mixins in Vue 2?
-#### What is a composable in Vue 3?
+#### What are composable in Vue 3?
 #### How can force component's re-rendering?
 * The best way to use the ‘key’ attribute on a component and change it
 * Also, we can use $forceUpdate()
@@ -28,8 +28,8 @@ groupId: 'frameworks and libraries'
 #### How can we render a list of items?
 #### What is “key” in vue.js?
 The "key" attribute is used to give each rendered element a unique identifier.
-#### Why do we need set "key" attribute when we render a list?
-#### Why we shouldn't use indexes as a key in v-for?
+#### Why do we need to set "key" attribute when we render a list?
+#### Why shouldn't we use indexes as a key in v-for?
 #### Can we use v-if and v-for on the same element?
 
 ---
@@ -41,27 +41,27 @@ Directives are special tokens in the markup that tell the Vue.js to do something
 #### What directives do you know? What directives do you use in your day-to-day work?
 v-model, v-if, v-else, v-show, v-html, v-for, v-on, v-bind, v-slot (old fashioned)
 
-#### How can we create custom directive?
+#### How can we create a custom directive?
 #### What is a two-way binding?
 #### How can we make two-way binding without v-model?
 We can rewrite the v-model by attribute ‘:value’ and ‘@input’ event.
 
-#### What are difference using v-model in Vue 2 and Vue 3?
-#### What are directives modifiers?
-#### What modifiers v-model have?
+#### What is the difference using v-model in Vue 2 and Vue 3?
+#### What are directive modifiers?
+#### What modifiers v-model has?
 .lazy, .number, .trim etc.
 
 ---
 
 ### Vue component
 #### What are components in Vue.js?
-#### Name parts of Vue component?
-#### What are props in Vue component?
+#### Name parts of a Vue component?
+#### What are props in a Vue component?
 #### Why do we need $emit?
 #### What is a component lifecycle? What lifecycle hooks do you use the most?
 #### What lifecycle hook is the best for making request to a backend?
 #### What lifecycle hook do you use for cleanup?
-#### How can we make style block local for current component?
+#### How can we make style block local for a current component?
 #### How globally register a component in Vue 3? 
 #### Why do we need async components in Vue?
 
@@ -77,8 +77,8 @@ Scoped slots allow passing data back to a parent component.
 ---
 
 ### Reactivity
-#### What is a reactivity in Vue?
-#### How does reactivity works in Vue 2 and Vue 3?
+#### What is reactivity in Vue?
+#### How does reactivity work in Vue 2 and Vue 3?
 
 ---
 
@@ -102,8 +102,8 @@ The ‘ref’ allows us to obtain a direct reference to a specific DOM element o
 The difference is that computed properties are cached based on their reactive dependencies. A computed property will only re-evaluate when some of its reactive dependencies have changed.
 
 #### Watch
-##### What is a watch and how can we watch changes in model?
-##### How can we watch nested object?
+##### What is a watch and how can we watch changes in a model?
+##### How can we watch a nested object?
 
 #### $nextTick
 ##### What is the $nextTick method?
@@ -158,7 +158,7 @@ The Virtual DOM is a lightweight copy of the actual DOM. Vue.js uses this Virtua
 ##### How can we add animations on adding/removing an item from a list?
 #### Keep-Alive
 ##### What is the Keep-Alive? What is the purpose of Keep-Alive?
-##### What is the analog of onMounted hook in a Keep-Alive component? Why it can be useful?
+##### What is the analog of onMounted hook in a Keep-Alive component? Why can it be useful?
 #### Teleport
 ##### Why do we need Teleports?
 #### Suspense
@@ -166,7 +166,7 @@ The Virtual DOM is a lightweight copy of the actual DOM. Vue.js uses this Virtua
 ---
 
 ### State Management
-#### Tell about state management in Vue.js. What is the purpose of state manager? What problems it solves?
+#### Tell about state management in Vue.js. What is the purpose of state manager? What problems it solve?
 #### What does Pinia stand for?
 Pinia is a state management library for Vue.js. It helps manage the state of an application and facilitates the flow of data between components.
 

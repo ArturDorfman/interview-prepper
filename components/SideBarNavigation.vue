@@ -21,9 +21,16 @@
                 'text-primary dark:text-primary': contentItem._path === route.path
               }"
             >
-              <div class="rounded-md p-1 inline-flex ring-inset ring-1 bg-gray-100/50 dark:bg-gray-800/50 ring-gray-300 dark:ring-gray-700 group-hover:bg-primary group-hover:ring-primary group-hover:text-background">
+              <div
+                class="rounded-md p-1 inline-flex ring-inset ring-1 bg-gray-100/50 dark:bg-gray-800/50 ring-gray-300 dark:ring-gray-700"
+                :class="{
+                  'group-hover:bg-primary group-hover:ring-primary group-hover:text-background': contentItem._path !== route.path,
+                  'group-hover:bg-primary group-hover:ring-primary group-hover:text-gray-100/50': contentItem._path === route.path,
+                }"
+              >
                 <Icon :name="sidebarIcons[contentItem._path]" class="flex-shrink-0" />
               </div>
+
               <span class="text-sm/6 truncate">{{ contentItem.title }}</span>
             </NuxtLink>
           </li>
