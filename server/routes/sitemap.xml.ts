@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
   // Fetch all documents
   const docs = await serverQueryContent(event).find()
   const sitemap = new SitemapStream({
-    hostname: 'https://example.com'
+    hostname: 'https://interview-prepper-mauve.vercel.app/'
   })
 
   for (const doc of docs) {
