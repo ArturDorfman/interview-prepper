@@ -26,10 +26,11 @@
 
 <script setup lang="ts" generic="T">
 withDefaults(defineProps<{
-  links: T[]
+  links?: T[]
   level?: number
   activeTocId?: string | null
 }>(), {
+  links: () => ([]),
   level: 0,
   activeTocId: null
 })

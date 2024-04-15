@@ -18,7 +18,7 @@
           </div>
 
           <div class="not-prose col-span-2 text-sm">
-            <TableOfContents :links="doc.body.toc.links" />
+            <TableOfContents :links="doc.body?.toc?.links" />
           </div>
         </div>
       </template>
