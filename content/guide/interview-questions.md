@@ -7,52 +7,53 @@ groupId: 'general'
 
 ### Junior
 #### Do you follow the news in the world of frontend? How exactly?
-I read people on LinkedIn, following few authors on the X (Twitter), time-to-time read articles on Medium. Also, I have email subscriptions.
+I read people on LinkedIn, following few authors on the X (Twitter), time-to-time read articles on Medium.
+Also, I have email subscriptions.
 
 #### What separates good code from bad code?
-I'm gonna describe good code points and bad code is an opposite.
+I'm going to describe good code points and bad code is the opposite.
 
 **Good Code:**
-1. Readability and Maintainability:
+1. Readability and Maintainability
    * Code should be easy to read and understand.
    * Follow a consistent coding style.
    * Use meaningful variable and function names.
    * Provide comments when necessary.
 
-2. Modularity:
+2. Modularity
    * Break code into modular components or functions.
    * Encapsulate functionality to promote code reuse.
    
-3. Efficiency:
+3. Efficiency
    * Code should be optimized for performance where necessary.
    * Avoid unnecessary computations or resource usage.
 
-4. Scalability:
+4. Scalability
    * Design code that can scale as requirements evolve.
    * Consider potential future changes.
 
-5. Correctness:
+5. Correctness
    * Code should produce the expected output.
    * Handle edge cases and errors gracefully.
 
-6. Documentation:
+6. Documentation
    * Provide clear and comprehensive documentation.
    * Include information on how to use and extend the code.
 
-7. Testing:
+7. Testing
    * Implement unit tests to ensure code correctness.
    * Conduct thorough testing, including edge cases.
 
-8. Consistency:
+8. Consistency
    * Follow established conventions and patterns.
    * Be consistent in coding style and approach.
 
-9. Avoidance of Code Smells:
+9. Avoidance of Code Smells
    * Eliminate redundant code.
    * Minimize code complexity.
    * Avoid long methods or functions.
 
-10. Version Control:
+10. Version Control
     * Use version control systems effectively (e.g., Git).
     * Provide meaningful commit messages.
 
@@ -89,24 +90,24 @@ I'm gonna describe good code points and bad code is an opposite.
    * Establish a network connection to a resource, typically for secure connections (HTTPS).
 
 **HTTP Status Codes:**
-1. 1xx (Informational):
+1. 1xx (Informational)
    * 100 Continue
    * 101 Switching Protocols
    * 102 Processing
 
-2. 2xx (Successful):
+2. 2xx (Successful)
    * 200 OK
    * 201 Created
    * 204 No Content
    * 206 Partial Content
 
-3. 3xx (Redirection):
+3. 3xx (Redirection)
    * 301 Moved Permanently
    * 302 Found (or temporarily moved)
    * 304 Not Modified
    * 307 Temporary Redirect
 
-4. 4xx (Client Error):
+4. 4xx (Client Error)
    * 400 Bad Request
    * 401 Unauthorized
    * 403 Forbidden
@@ -115,21 +116,24 @@ I'm gonna describe good code points and bad code is an opposite.
    * 422 Unprocessable Entity (often used in REST APIs)
    * 429 Too Many Requests
 
-5. 5xx (Server Error):
+5. 5xx (Server Error)
    * 500 Internal Server Error
    * 501 Not Implemented
    * 503 Service Unavailable
    * 504 Gateway Timeout
 
 #### What is the difference between PUT and PATCH methods?
-Both methods are used for updating resources, PUT is generally associated with full updates or creation, while PATCH is specifically designed for partial updates.
+Both methods are used for updating resources, PUT is generally associated with full updates or creation,
+while PATCH is specifically designed for partial updates.
 
 #### What is the difference between HTTP and HTTPS?
 The primary difference between HTTP and HTTPS lies in the level of security they provide.
-HTTPS is the preferred choice for websites and applications that require secure data transmission, especially when dealing with sensitive information.
+HTTPS is the preferred choice for websites and applications that require secure data transmission,
+especially when dealing with sensitive information.
 
 #### What is the risk of executing user-generated code?
-User-generated code may contain security vulnerabilities, such as code injection, SQL injection, or other exploits that could be used to compromise the system.
+User-generated code may contain security vulnerabilities, such as code injection, SQL injection,
+or other exploits that could be used to compromise the system.
 
 #### What is the difference between a class and an abstract class in TS?
 Abstract class can't be instantiated. Abstract class is used to be inherited by other classes. 
@@ -140,13 +144,15 @@ Abstract class can't be instantiated. Abstract class is used to be inherited by 
 #### Are the principles of SoC, DRY, KISS, YAGNI, BDUF, APO known?
 Yes, I know them all.
 1. SoC (Separation of Concerns)
-   * This principle advocates dividing a computer program into distinct sections, where each section addresses a specific concern.
+   * This principle advocates dividing a computer program into distinct sections,
+   where each section addresses a specific concern.
    By doing so, it becomes easier to understand, maintain, and modify the code.
 
 2. DRY (Don't Repeat Yourself)
-   * This principle advocates for reducing redundancy in code by avoiding duplications.
+   * This principle advocates for reducing redundancy in the code by avoiding duplications.
    The idea is that each piece of knowledge or logic should only exist in a single place in the codebase.
-   This not only makes the code more maintainable but also reduces the chances of errors caused by inconsistencies in duplicated code.
+   This not only makes the code more maintainable but also reduces the chances of errors caused
+   by inconsistencies in duplicated code.
 
 3. KISS (Keep It Simple, Stupid)
    * The KISS principle suggests that simplicity should be a key goal in design and implementation.
@@ -155,61 +161,94 @@ Yes, I know them all.
 
 4. YAGNI (You Ain't Gonna Need It)
    * YAGNI advises against adding features to a software project until they are actually needed.
-   Developers should avoid implementing functionality based on assumptions about future requirements that may or may not materialize.
+   Developers should avoid implementing functionality
+   based on assumptions about future requirements that may or may not materialize.
    This principle helps prevent over-engineering and ensures that the software remains focused on current needs.
 
 5. BDUF (Big Design Up Front)
    * BDUF suggests that extensive planning and design should be done before starting the implementation of a project.
-   However, many modern development methodologies, such as Agile, emphasize iterative and adaptive planning, allowing for adjustments as the project progresses.
+   However, many modern development methodologies, such as Agile, emphasize iterative and adaptive planning,
+   allowing for adjustments as the project progresses.
 
 6. APO (Avoid Premature Optimization)
    * APO advises against optimizing code for performance before it is necessary.
    Premature optimization can lead to complex and hard-to-maintain code.
-   It's often better to focus on writing clean and understandable code first and optimize later if performance issues arise.
+   It's often better to focus on writing clean and understandable
+   code first and optimize later if performance issues arise.
 
 #### Explain each component of SOLID.
 [SOLID](https://www.youtube.com/watch?v=TxZwqVTaCmA&t=2s&ab_channel=UlbiTV) is an acronym that represents a set of five design principles for writing maintainable and scalable software.
 1. **Single Responsibility Principle (SRP)**
-   * **Definition:** A class should have only one reason to change, meaning that it should have only one responsibility or job.
-   * **Explanation:** This principle emphasizes that a class should focus on doing one thing and doing it well. 
-   If a class has multiple responsibilities, it becomes more difficult to maintain, understand, and modify. 
-   Separating concerns makes the code more modular and adaptable to change.
+   * Definition
+     * A class should have only one reason to change, meaning that it should have only one responsibility or job.
+
+   * Explanation
+     * This principle emphasizes that a class should focus on doing one thing and doing it well. 
+     If a class has multiple responsibilities, it becomes more difficult to maintain, understand, and modify. 
+     Separating concerns makes the code more modular and adaptable to change.
 
 2. **Open/Closed Principle (OCP)**
-   * **Definition:** Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.
-   * **Explanation:** This principle encourages developers to design their systems in a way that allows for new functionality to be added through extension rather than altering existing code. 
-   This reduces the risk of introducing bugs into well-established code and promotes the use of interfaces and abstract classes to facilitate future extensions.
+   * Definition
+     * Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.
+
+   * Explanation
+     * This principle encourages developers to design their systems in a way
+     that allows for new functionality to be added through an extension rather than altering existing code. 
+     This reduces the risk of introducing bugs into well-established code
+     and promotes the use of interfaces and abstract classes to facilitate future extensions.
 
 3. **Liskov Substitution Principle (LSP)**
-   * **Definition:** Objects of a superclass should be able to be replaced with objects of a subclass without affecting the correctness of the program.
-   * **Explanation:** This principle ensures that subtypes must be substitutable for their base types without altering the correctness of the program. 
-   In other words, if a class is a subclass of another class, it should be usable in any place where its parent class is used without causing issues.
+   * Definition
+     * Objects of a superclass should be able to be replaced with objects of
+     a subclass without affecting the correctness of the program.
+
+   * Explanation
+     * This principle ensures that subtypes must be substitutable for
+     their base types without altering the correctness of the program.
+     In other words, if a class is a subclass of another class,
+     it should be usable in any place where its parent class is used without causing issues.
 
 4. **Interface Segregation Principle (ISP)**
-   * **Definition:** A class should not be forced to implement interfaces it does not use. 
-   In other words, a class should not be required to implement methods it does not need.
-   * **Explanation:** This principle advises against creating large, monolithic interfaces. 
-   Instead, it suggests breaking interfaces into smaller, more specific ones, tailored to the needs of the classes that implement them. 
-   This helps to avoid the problem of forcing classes to implement methods they don't actually need.
+   * Definition
+     * A class should not be forced to implement interfaces it does not use. 
+     In other words, a class should not be required to implement methods it does not need.
+
+   * Explanation
+     * This principle advises against creating large, monolithic interfaces. 
+     Instead, it suggests breaking interfaces into smaller, more specific ones,
+     tailored to the needs of the classes that implement them. 
+     This helps to avoid the problem of forcing classes to implement methods they don't need.
 
 5. **Dependency Inversion Principle (DIP)**
-   * **Definition:** High-level modules should not depend on low-level modules. Both should depend on abstractions. 
-   Abstractions should not depend on details; details should depend on abstractions.
-   * **Explanation:** This principle encourages the use of abstractions (interfaces or abstract classes) to decouple high-level modules from low-level modules. 
-   This inversion of dependencies makes the system more flexible and easier to maintain, as changes in low-level modules do not directly affect high-level modules.
+   * Definition
+     * High-level modules should not depend on low-level modules.
+     Both should depend on abstractions.
+     Abstractions should not depend on details; details should depend on abstractions.
+
+   * Explanation
+     * This principle encourages the use of abstractions (interfaces or abstract classes)
+     to decouple high-level modules from low-level modules.
+     This inversion of dependencies makes the system more flexible and easier to maintain,
+     as changes in low-level modules do not directly affect high-level modules.
 
 #### Why should you pay attention to the complexity of the algorithm?
-Paying attention to algorithmic complexity is essential for making informed decisions about algorithm selection, resource allocation, and overall system performance, which are critical factors in developing robust and efficient software applications.
+Paying attention to algorithmic complexity is essential for making informed decisions about algorithm selection,
+resource allocation, and overall system performance,
+which are critical factors in developing robust and efficient software applications.
 
 #### What entities do you divide the file structure into at the beginning of the design?
-It's depends on size of a current project. Usually, I've been using few architecture approaches. There are typical companies boiler plate and modular. Typical parts of these approaches are components, utils, views/pages, configs, assets etc.
+It depends on the size of a current project.
+Usually, I've been using few architecture approaches.
+There are typical companies boilerplate and modular.
+Typical parts of these approaches are components, utils, views/pages, configs, assets, etc.
 
 #### How do you know when it's time to separate a certain entity in a project?
-It's important to weigh the pros and cons, considering factors like maintainability, scalability, and collaboration within your development team. 
+It's important to weigh the pros and cons, considering factors like maintainability,
+scalability, and collaboration within your development team. 
 If code base becomes hard to maintain or even understand fast, we should start refactoring.  
 
 #### What do you do to make your code easier to maintain?
-For easier maintain my code base, I'm following few crucial principles.
+For easier to maintain my code base, I'm following a few crucial principles.
 * Following design patterns
 * Regularly review and refactor your code to improve its structure and readability
 * Using Automated Testing
@@ -219,23 +258,33 @@ For easier maintain my code base, I'm following few crucial principles.
 
 #### What is refactoring and how do you do it?
 Refactoring is the process of restructuring existing code base without changing its external behavior.
-The main purpose of refactoring is to improve the code's readability, maintainability, and overall design without altering its functionality.
+The main purpose of refactoring is to improve the code's readability, maintainability,
+and overall design without altering its functionality.
 
-Here are some common techniques and best practices for refactoring:
-1. Analyze the codebase to identify areas that could be improved in terms of readability, maintainability, or performance.
-2. Ensure that the existing code has a comprehensive suite of tests. This helps ensure that your changes do not introduce new bugs.
-3. Each step should be focused on a specific improvement and should not change the external behavior of the code.
-4. Use of Git to track changes. This allows you to revert to a previous state if something goes wrong.
-5. Use established design patterns to improve the overall structure of your code.
-6. Understand the existing code thoroughly before making changes. Refactoring should be done with confidence, backed by a good understanding of the codebase.
-7. Ensure that your code works and you don't produce new issues. Then update or add tests.
-8. Update Documentation
+Here are some common techniques and best practices for refactoring
+* Analyze the codebase to identify areas that could be improved in terms of readability, maintainability, or performance.
+
+* Ensure that the existing code has a comprehensive suite of tests. This helps ensure that your changes do not introduce new bugs.
+
+* Each step should be focused on a specific improvement and should not change the external behavior of the code.
+
+* Use of Git to track changes. This allows you to revert to a previous state if something goes wrong.
+
+* Use established design patterns to improve the overall structure of your code.
+
+* Understand the existing code thoroughly before making changes.
+Refactoring should be done with confidence, backed by a good understanding of the codebase.
+
+* Ensure that your code works and you don't produce new issues. Then update or add tests.
+
+* Update Documentation
 
 ---
 
 ### Senior
 #### What are the necessary knowledge and skills a Senior Developer needs to have?
-A Senior Frontend Developer is expected to have a combination of technical expertise, soft skills, and a deep understanding of web development.
+A Senior Frontend Developer is expected to have a combination of technical expertise,
+soft skills, and a deep understanding of web development.
 
 #### What should be the work and communication in the development team?
 Effective work and communication are crucial in a development team to ensure the success of a project.
@@ -258,10 +307,12 @@ Effective work and communication are crucial in a development team to ensure the
 7. Celebrate Achievements
 
 #### What methods of project evaluation and planning do you use?
-On our project we've been using Scrum and Kanban. As evaluation points we've been using story points and milestones.
+On our project, we've been using Scrum and Kanban. As evaluation points, we've been using story points and milestones.
 
 #### What do you pay attention to when choosing technologies for a project?
-When choosing technologies for a project, it's crucial to consider various factors to ensure the success and efficiency of the development process.
+When choosing technologies for a project,
+it's crucial to consider various factors to ensure the success and efficiency of the development process.
+
 1. Project Requirements
    * Understand the specific needs and goals of the project.
    * Consider scalability, performance, and security requirements.
@@ -305,9 +356,10 @@ Everything is individual. So, mentoring should be personalized. Here are some st
    * Begin by understanding the individual's career goals, interests, and current skill set.
    * This will help you tailor your mentoring approach to their specific needs.
 
-2. Establish Clear Objectives
-   * Set clear, achievable objectives for the mentoring relationship. 
-   * This could include specific skills they want to acquire, projects they want to work on, or career milestones they aim to achieve.
+2. Establish Clear Goals
+   * Set clear, achievable goals for the mentoring relationship. 
+   * This could include specific skills they want to acquire,
+   projects they want to work on, or career milestones they aim to achieve.
 
 3. Regular Communication
    * Maintain open and regular communication. 
@@ -341,18 +393,21 @@ Everything is individual. So, mentoring should be personalized. Here are some st
    * Celebrate small victories and provide encouragement during challenges.
 
 #### How do you introduce new technologies or practices into the team?
-Introducing new technologies or practices to a team can be a delicate process that requires effective communication, collaboration, and strategic planning.
+Introducing new technologies or practices to a team can be a delicate process that requires effective communication,
+collaboration, and strategic planning.
 
 1. Understand the Team's Current State
    * Assess the current workflow, practices, and technologies in use.
    * Identify pain points, areas for improvement, and potential benefits of the new technology or practice.
 
-2. Define Clear Objectives
+2. Define Clear Goals
    * Clearly outline the goals and objectives of introducing the new technology or practice.
    * Highlight the specific benefits and improvements it can bring to the team and the organization as a whole.
 
 3. Highlight Success Stories
-   * Share success stories and case studies from other teams or organizations that have successfully implemented similar changes.
+   * Share success stories and case studies from other teams or
+   organizations that have successfully implemented similar changes.
+
    * Showcase tangible benefits to motivate the team.
 
 4. Provide Training and Support
@@ -383,28 +438,65 @@ Introducing new technologies or practices to a team can be a delicate process th
 #### How do you solve conflicts and problems in a team?
 Successfully resolving conflicts and problems in a team requires proactive approaches and thoughtful interventions.
 1. Identifying the issue
-   * Acknowledge the conflict: Openly acknowledging the conflict's existence is crucial. Don't brush it under the rug, it can get worse.
-   * Gather information: Talk to team members involved, observe interactions, and consider past occurrences. This helps uncover the root cause, not just surface-level symptoms.
-   * Identify the type of conflict: Different approaches work for different types of conflict. Understanding whether it's personality clashes, task disagreements, communication issues, or resource allocation problems helps tailor your response.
+   * Acknowledge the conflict
+     * Openly acknowledging the conflict's existence is crucial. Don't brush it under the rug, it can get worse.
+
+   * Gather information
+     * Talk to team members involved, observe interactions, and consider past occurrences.
+     This helps uncover the root cause, not just surface-level symptoms.
+
+   * Identify the type of conflict
+     * Different approaches work for different types of conflict.
+     Understanding whether it's personality clashes, task disagreements,
+     communication issues, or resource allocation problems helps tailor your response.
 
 2. Facilitating effective communication
-   * Active listening: Create a safe space where everyone feels heard and understood. Encourage each team member to express their perspectives and concerns without interruption.
-   * Focus on "I" statements: Avoid accusatory "you" language. Instead, use "I" statements to own your feelings and perspectives, fostering empathy and understanding.
-   * Clarify misunderstandings: Sometimes, conflicts arise from miscommunication or assumptions. Rephrase what you've heard, ask clarifying questions, and ensure everyone is on the same page.
+   * Active listening
+     * Create a safe space where everyone feels heard and understood.
+     Encourage each team member to express their perspectives and concerns without interruption.
+
+   * Focus on "I" statements
+     * Avoid accusatory "you" language.
+     Instead, use "I" statements to own your feelings and perspectives, fostering empathy and understanding.
+
+   * Clarify misunderstandings
+     * Sometimes, conflicts arise from miscommunication or assumptions.
+     Rephrase what you've heard, ask to clarify questions, and ensure everyone is on the same page.
 
 3. Finding solutions
-   * Brainstorm collaboratively: Encourage everyone to contribute ideas for solutions. Brainstorming in a non-judgmental environment fosters creativity and ownership.
-   * Focus on common ground: Find areas of agreement, even if small, to build upon. Emphasize shared goals and the greater good of the team.
-   * Compromise and flexibility: Be willing to find a middle ground that addresses everyone's concerns to the best extent possible. Flexibility and a willingness to adapt are key.
+   * Brainstorm collaboratively
+     * Encourage everyone to contribute ideas for solutions.
+     Brainstorming in a non-judgmental environment fosters creativity and ownership.
+
+   * Focus on common ground
+     * Find areas of agreement, even if small, to build upon.
+     Emphasize shared goals and the greater good of the team.
+
+   * Compromise and flexibility
+     * Be willing to find a middle ground that addresses everyone's concerns to the best extent possible.
+     Flexibility and a willingness to adapt are key.
 
 4. Building a stronger team
-   * Promote open communication: Foster a culture of open communication where team members feel comfortable expressing their concerns and addressing issues before they escalate.
-   * Regular check-ins: Schedule regular team meetings to discuss progress, address any lingering issues, and ensure everyone feels heard and supported.
+   * Promote open communication
+     * Foster a culture of open communication where team members feel comfortable expressing their concerns
+     and addressing issues before they escalate.
+
+   * Regular check-ins
+     * Schedule regular team meetings to discuss progress, address any lingering issues,
+     and ensure everyone feels heard and supported.
 
 5. Additional Tips
-   * Seek external help: If the conflict is complex or difficult to resolve internally, consider involving a mediator or facilitator to guide the discussion and offer objective perspectives.
-   * Focus on solutions, not blame: Avoid dwelling on past mistakes or assigning blame. Instead, focus on finding solutions and implementing positive changes moving forward.
-   * Prioritize team success: Remind everyone that resolving the conflict and working together effectively is ultimately in the best interest of the team and its goals.
+   * Seek external help
+     * If the conflict is complex or challenging to resolve internally,
+     consider involving a mediator or facilitator to guide the discussion and offer objective perspectives.
+
+   * Focus on solutions, not blame
+     * Avoid dwelling on past mistakes or assigning blame.
+     Instead, focus on finding solutions and implementing positive changes moving forward.
+
+   * Prioritize team success
+     * Remind everyone that resolving the conflict
+     and working together effectively is ultimately in the best interest of the team and its goals.
 
 [//]: # (#### What will front-end development look like in two to three years?)
 
@@ -425,54 +517,71 @@ Successfully resolving conflicts and problems in a team requires proactive appro
 ### Soft Skills
 #### What do you know about Conversation-starting Techniques?
 1. Ask Open-Ended Questions
-   * Instead of asking questions that can be answered with a simple "yes" or "no," ask open-ended questions that encourage people to share more about themselves.
+   * Instead of asking questions that can be answered with a simple "yes" or "no,"
+   ask open-ended questions that encourage people to share more about themselves.
 
 2. Compliment
-   * Give a genuine (true) compliment to start the conversation on a positive note. It could be about someone's appearance, an accomplishment, or something you genuinely appreciate.
+   * Give a genuine (true) compliment to start the conversation on a positive note.
+   It could be about someone's appearance, an accomplishment, or something you genuinely appreciate.
 
 3. Share Something Personal
-   * Opening up a bit about yourself can make others feel more comfortable doing the same. Share a relevant personal story or experience.
+   * Opening up a bit about yourself can make others feel more comfortable doing the same.
+   Share a relevant personal story or experience.
 
 4. Use Humor
-   * Humor can break the ice and make people feel more at ease. Just be mindful of the context and the other person's sense of humor. (Use with caution!) 
+   * Humor can break the ice and make people feel more at ease.
+   Just be mindful of the context and the other person's sense of humor. (Use with caution!) 
 
 5. Find Common Ground
-   * Look for shared interests, experiences, or mutual connections. Finding common ground helps establish a connection from the beginning.
+   * Look for shared interests, experiences, or mutual connections.
+   Finding common ground helps establish a connection from the beginning.
 
 6. Ask for Advice
-   * Seeking advice is a great way to involve others in the conversation. It shows that you value their opinion and can lead to interesting discussions.
+   * Seeking advice is a great way to involve others in the conversation.
+   It shows that you value their opinion and can lead to interesting discussions.
 
 7. Bring up Current Events or Shared Interests
    * Discussing current events or topics of mutual interest can provide a natural starting point for a conversation.
 
 8. Use F.O.R.D. Technique
-   * F.O.R.D. stands for Family, Occupation, Recreation, and Dreams. These are safe and common topics that can lead to meaningful conversations.
+   * F.O.R.D. stands for Family, Occupation, Recreation, and Dreams.
+   These are safe and common topics that can lead to meaningful conversations.
 
 9. Start with a Question
-   * Begin the conversation by directly asking the other person a question. This immediately involves them and gives them a reason to respond.
+   * Begin the conversation by directly asking the other person a question.
+   This immediately involves them and gives them a reason to respond.
 
 10. Be a Good Listener
-    * Sometimes, starting a conversation involves listening. Respond thoughtfully to what others are saying, and it can naturally lead to a more extended discussion.
+    * Sometimes, starting a conversation involves listening.
+    Respond thoughtfully to what others are saying, and it can naturally lead to a more extended discussion.
 
-Remember, the key to successful conversations is to be genuine, respectful, and attentive to the other person's responses. Adjust your approach based on the context and the individual you're engaging with.
+Remember, the key to successful conversations is to be genuine, respectful,
+and attentive to the other person's responses.
+Adjust your approach based on the context and the individual you're engaging with.
 
 #### What do you know about Time management? What tools and techniques do you use in your life?
-Time management techniques are strategies and approaches used to utilize and allocate time to tasks and activities effectively.
+Time management techniques are strategies
+and approaches used to use and allocate time to tasks and activities effectively.
 
 1. Prioritization
-   * Eisenhower Matrix: Divide tasks into four categories based on urgency and importance - urgent and important, important but not urgent, urgent but not important, neither urgent nor important.
+   * Eisenhower Matrix: Divide tasks into four categories based on urgency and importance—urgent and important,
+   important but not urgent, urgent but not important, neither urgent nor important.
 
 2. To-Do Lists
-   * Daily/Weekly To-Do Lists: Create lists of tasks for the day or week, prioritizing them based on importance. Cross off tasks as you complete them.
+   * Daily/Weekly To-Do Lists: Create lists of tasks for the day or week, prioritizing them based on importance.
+   Cross off tasks as you complete them.
 
 3. Time Blocking
-   * Allocate specific blocks of time to different tasks or activities. This helps in focusing on one task at a time and avoids multitasking.
+   * Allocate specific blocks of time to different tasks or activities.
+   This helps in focusing on one task at a time and avoids multitasking.
 
 4. Pomodoro Technique
-   * Work in focused intervals, typically 25 minutes, followed by a 5-minute break. After completing four cycles, take a longer break.
+   * Work in focused intervals, typically 25 minutes, followed by a 5-minute break.
+   After completing four cycles, take a longer break.
 
 5. Batching
-   * Group similar tasks together and tackle them during specific time periods. This minimizes context switching and improves efficiency.
+   * Group similar tasks together and tackle them during specific time periods.
+   This minimizes context switching and improves efficiency.
 
 6. Set SMART Goals
    * Specific, Measurable, Achievable, Relevant, and Time-bound goals help provide clarity and focus.
@@ -487,7 +596,7 @@ Time management techniques are strategies and approaches used to utilize and all
    * Delegate tasks that can be done by others, freeing up your time for more strategic or high-priority activities.
 
 10. Use Technology
-    * Utilize productivity tools, apps, and calendars to schedule tasks and reminders.
+    * Use productivity tools, apps, and calendars to schedule tasks and reminders.
 
 11. Learn to Say No
     * Avoid overcommitment by learning to say no to tasks that do not align with your priorities.
@@ -496,7 +605,7 @@ Time management techniques are strategies and approaches used to utilize and all
     * Take short breaks to refresh your mind. Mindfulness practices can improve focus and concentration.
 
 13. Eat That Frog
-    * Tackle the most challenging or important task first thing in the morning when your energy levels are high.
+    * Tackle the most challenging or important task-first thing in the morning when your energy levels are high.
 
 14. The Two-Minute Rule
     * If a task takes less than two minutes, do it immediately rather than postponing it.
@@ -553,13 +662,14 @@ Delegating tasks effectively is an essential skill for leaders and team managers
     * After completing the task, conduct a debrief to evaluate the process and outcomes.
     * Identify what worked well and areas for improvement in the delegation process.
 
-Remember, effective delegation is not just about assigning tasks but also about fostering a culture of trust, communication, and collaboration within your team. 
+Remember, effective delegation is not just about assigning tasks but also about fostering a culture of trust,
+communication, and collaboration within your team. 
 It helps individuals develop new skills, promotes a sense of ownership, and contributes to overall team success.
 
 #### What rules and norms of business communication do you know?
 Key rules and norms of business communication:
 1. Clarity and Conciseness
-   * Clearly express your message without ambiguity.
+   * Clearly express your message without an ambiguity.
    * Use straightforward language and avoid unnecessary details.
 
 2. Professional Tone
@@ -618,7 +728,7 @@ Key rules and norms of business communication:
 
 2. Study the Client's Business
    * Research your client's company thoroughly, including its history, mission, values, and overall business strategy.
-   * Understand the client's target audience, competitors, and market positioning
+   * Understand the client's primary audience, competitors, and market positioning
 
 3. Understand the Client's Product/Service
    * Familiarize yourself with the features, functionalities, and unique selling points of the client's product or service.
@@ -653,11 +763,12 @@ Key rules and norms of business communication:
     * Use feedback to make data-driven decisions and guide future product development.
 
 #### Do you motivate your team members? How do you do that?
-Motivating teammates to develop and grow is crucial for fostering a positive and productive work environment. Here are some strategies you can employ:
+Motivating teammates to develop and grow is crucial for fostering a positive and productive work environment.
+Here are some strategies you can employ:
 
 1. Set Clear Goals
    * Clearly define individual and team goals.
-   * Make sure everyone understands the overall objectives of the project and the role they play in achieving them.
+   * Make sure everyone understands the overall goals of the project and the role they play in achieving them.
 
 2. Encourage Learning and Skill Development
    * Create a culture that values continuous learning.
@@ -671,7 +782,8 @@ Motivating teammates to develop and grow is crucial for fostering a positive and
 
 4. Acknowledge and Reward Achievements
    * Recognize and reward individual and team accomplishments.
-   * This can be done through formal channels such as awards or publicly acknowledging their contributions during team meetings.
+   * This can be done through formal channels such as awards
+   or publicly acknowledging their contributions during team meetings.
 
 5. Promote Collaboration
    * Foster a collaborative environment where team members can learn from each other.
@@ -692,7 +804,8 @@ Motivating teammates to develop and grow is crucial for fostering a positive and
 
 9. Connect Personal Goals to Professional Development
    * Understand the personal and professional goals of your team members.
-   * Try to align these with their roles and responsibilities, demonstrating how their development contributes to their broader aspirations.
+   * Try to align these with their roles and responsibilities,
+   demonstrating how their development contributes to their broader aspirations.
 
 10. Lead by Example
     * Demonstrate a commitment to your own professional development.
@@ -704,7 +817,8 @@ Motivating teammates to develop and grow is crucial for fostering a positive and
 
 12. Flexibility and Work-Life Balance:
     * Support a healthy work-life balance.
-    * When employees feel that their personal lives are respected, they are more likely to be engaged and motivated to contribute positively.
+    * When employees feel that their personal lives are respected,
+    they are more likely to be engaged and motivated to contribute positively.
 
 Remember that motivation is a dynamic and ongoing process.
 Regularly revisit these strategies and adapt them to the evolving needs of your team.
