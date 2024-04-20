@@ -14,7 +14,7 @@ The main difference is that '===' checks for equality of both value and type.
 #### What is the "!!" operator used for?
 This operator is used for converting some value to a boolean.
 
-#### What values in JS are false?
+#### What values in JS are falsy?
 ' ', 0, null, undefined, NaN, false.
 
 #### What is ‘??’ and why can it be useful?
@@ -39,8 +39,12 @@ They are two primitive types in JS. **Null** is explicitly assigned to a variabl
 #### What is the difference between an array and an object? In what cases do you use what?
 1. Structure
    * An **array** is an ordered collection of values, each identified by an index or a key.
-     The indices are integers, and they start from 0. Arrays are a special type of object in JavaScript where keys are automatically assigned as incremental integers starting from 0.
-   * An **object** is an unordered collection of key-value pairs. The keys in an object are strings or symbols, and each key is associated with a value.
+     The indices are integers, and they start from 0.
+   Arrays are a special type of object in JavaScript where keys
+   are automatically assigned as incremental integers starting from 0.
+
+   * An **object** is an unordered collection of key-value pairs.
+   The keys in an object are strings or symbols, and each key is associated with a value.
    Objects can store data in a more structured way compared to arrays.
 
 2. Use Cases
@@ -52,7 +56,8 @@ They are two primitive types in JS. **Null** is explicitly assigned to a variabl
    * Object
      * Use objects when you have a collection of data with named properties.
      * Objects are useful when dealing with key-value pairs and when the order of the data is not significant. 
-     * Objects are often used to represent entities or concepts in the real world (e.g., representing a person with properties like name, age, and address).
+     * Objects are often used to represent entities or concepts in the real world
+     (e.g., representing a person with properties like name, age, and address).
 
 Example combining both array and object:
 ```javascript
@@ -77,10 +82,12 @@ A table summary showing the differences between these keywords.
 | let       | Global, Local, Block   | no & yes                       | yes, without default value   |
 | const     | Global, Local, Block   | no & no                        | yes, without default value   |
 
-Good explanation in [article](https://www.freecodecamp.org/news/differences-between-var-let-const-javascript/) on freeCodeCamp or on the [video](https://www.youtube.com/watch?v=Gd_JG3e1g4A&ab_channel=DeeecodeTheWeb) as well.
+Good explanation in [article](https://www.freecodecamp.org/news/differences-between-var-let-const-javascript/)
+on freeCodeCamp or on the [video](https://www.youtube.com/watch?v=Gd_JG3e1g4A&ab_channel=DeeecodeTheWeb) as well.
 
 #### What is variable scope (another name is a lexical environment)?
-An [article](https://www.freecodecamp.org/news/scope-in-javascript-global-vs-local-vs-block-scope/) on freeCodeCamp gives a good understanding of scopes.
+An [article](https://www.freecodecamp.org/news/scope-in-javascript-global-vs-local-vs-block-scope/)
+on freeCodeCamp gives a good understanding of scopes.
 
 #### Is it possible to override const?
 We can't override const if it is primitive.
@@ -168,12 +175,23 @@ It provides a concise syntax for extracting multiple values and assigning them t
 In JavaScript, when you try to access an element at an index which does not exist in the array, it will return **undefined**.
 
 #### What are the benefits of including 'use strict' at the beginning of a JavaScript source file?
-The "use strict" directive is used in JavaScript to enable strict mode. This is a set of rules and restrictions designed to make the code more robust, catch common coding errors, and prevent the use of certain error-prone features.
-* **Error catching:** It turns previously silent errors into throw errors.
-* **Safer code:** Assignments to read-only properties, assignments to undeclared variables are not allowed in strict mode.
-* **Preventing global variables:** In strict mode, forgetting to declare variables with var, let, or const results in a ReferenceError.
-* **Restrictions on ‘this’ binding:** In strict mode, the value of this is undefined in functions that are not methods or constructors.
-* **Deprecated features are not allowed.**
+The "use strict" directive is used in JavaScript to enable strict mode.
+This is a set of rules and restrictions designed to make the code more robust,
+catch common coding errors, and prevent the use of certain error-prone features.
+
+* Error catching
+   * It turns previously silent errors into throw errors.
+
+* Safer code
+  * Assignments to read-only properties, assignments to undeclared variables are not allowed in strict mode.
+
+* Preventing global variables
+  * In strict mode, forgetting to declare variables with var, let, or const results in a ReferenceError.
+
+* Restrictions on ‘this’ binding
+  * In strict mode, the value of this is undefined in functions that are not methods or constructors.
+
+* Deprecated features are not allowed.
 
 #### How to access an HTML element from JS code and change its text?
 Here is an example of the way how we can do this.
@@ -188,11 +206,13 @@ function changeText() {
 ```
 
 #### What is the Symbol? What is its practical application?
-Symbols are a powerful addition to JavaScript, providing a way to create unique identifiers and hidden properties, contributing to better code organization and reducing the risk of naming conflicts.
+Symbols are a powerful addition to JavaScript, providing a way to create unique identifiers and hidden properties,
+contributing to better code organization and reducing the risk of naming conflicts.
 
 Symbols have two main use cases:
 1. Creating Unique Keys
-   * Symbols are often used to create unique keys for object properties. Since symbols are guaranteed to be unique, they are useful for avoiding naming collisions in objects.
+   * Symbols are often used to create unique keys for object properties.
+   Since symbols are guaranteed to be unique, they are useful for avoiding naming collisions in objects.
     ```javascript
     const mySymbol = Symbol('uniqueKey');
     const myObject = {};
@@ -204,7 +224,8 @@ Symbols have two main use cases:
 
 2. “Hidden” object properties.
    * Symbols are useful for defining "private" or "hidden" properties in objects.
-   Because symbols are not exposed through Object.keys() or for...in loops, they provide a way to attach metadata to objects without the risk of accidental interference.
+   Because symbols are not exposed through Object.keys() or for...in loops,
+   they provide a way to attach metadata to objects without the risk of accidental interference.
     ```javascript
     const privateProperty = Symbol('private');
     
@@ -257,7 +278,8 @@ In JavaScript and TypeScript, we often handle errors using a technique known as 
 Sometimes we can use Promises and the .catch() method.
 
 #### What are Access Modifiers?
-Access modifiers are keywords used in object-oriented programming to set the accessibility of objects, classes, variables, methods, or other members.
+Access modifiers are keywords used in object-oriented programming to set the accessibility of objects,
+classes, variables, methods, or other members.
 Access modifiers define the scope and visibility of a class member.
 
 JavaScript doesn't have built-in support for access modifiers.
@@ -286,10 +308,16 @@ On the other hand, TypeScript, being a statically typed superset of JavaScript,
 introduces typing along with other features such as access modifiers.
 There are three types of access modifiers in TypeScript:
 
-1. public: The public keyword is used to specify that a class member is publicly accessible throughout any part of the code.
-By default, all members are public in TypeScript.
-2. private: The private keyword is used to specify that a class member can only be accessed from within the class that declares it.
-3. protected: The protected keyword is used to specify that a class member can be accessed from within the class that declares it, or from a subclass.
+* public
+  * The public keyword is used to specify that a class member is publicly accessible throughout any part of the code.
+  By default, all members are public in TypeScript.
+
+* private
+  * The private keyword is used to specify that a class member can only be accessed from within the class that declares it.
+
+* protected
+  * The protected keyword is used to specify that a class member can be accessed from within the class that declares it,
+  or from a subclass.
 
 ```typescript
 class Person {
@@ -320,7 +348,8 @@ Before ES6, JavaScript didn't have a built-in module system, so developers had t
 In ES6 Modules:
 1. Code can be organized into separate files, each one exporting a single part or multiple parts, such as a class, function, or object.
 2. Each module is a piece of code that is executed once it is loaded.
-3. A module can import functionality from other modules and use them. It allows importing of functions, objects or primitive values and can also export them to be used by other modules.
+3. A module can import functionality from other modules and use them.
+It allows importing of functions, objects or primitive values and can also export them to be used by other modules.
 
 Here is an example of code organization.
 ```javascript
@@ -359,7 +388,8 @@ Optimizing animations in the browser involves several considerations, which I wi
    allowing you to get more precise animation timing which results in a smoother experience.
 
 4. Use debounce/throttle for functions that you run during the animations
-   * If you have to use scroll or resize events to control the animation, make sure to throttle or debounce them to increase performance.
+   * If you have to use scroll or resize events to control the animation,
+   make sure to throttle or debounce them to increase performance.
 
 5. Be mindful of mobile
    * If you're developing for mobile devices, remember that they have less power than desktop machines.
@@ -370,7 +400,8 @@ Optimizing animations in the browser involves several considerations, which I wi
    Web workers run on a separate thread, which means your calculations won't interrupt the user interface.
 
 7. Use tools to measure
-   * Lastly, use tools such as Chrome's DevTools Performance panel to measure the performance of your animations and find bottlenecks or performance issues.
+   * Lastly, use tools such as Chrome's DevTools Performance panel to measure the performance
+   of your animations and find bottlenecks or performance issues.
 
 #### How do you implement lazy loading of large resources such as images or scripts to optimize page loading? How does this interact with asynchronous code?
 To implement lazy loading of large resources like images or scripts, there are generally two methods:
@@ -396,12 +427,13 @@ Both methods help in significantly reducing initial load time on your webpage.
      * async: The script is run as soon as it's finished downloading, without blocking the parsing of the HTML document.
      * defer: The script is run only after the entire HTML document has been parsed.
 
-#### How do you work with architecture and design patterns in JavaScript? What specific patterns do you use to structure your code and make it easier to extend?
+[//]: # (#### How do you work with architecture and design patterns in JavaScript? What specific patterns do you use to structure your code and make it easier to extend?)
 
 #### How would you implement a percentage preloader on a site that needs to load images, 3D objects, and additional JSON files?
 A general idea of how we could implement a preloader on a site.
 1. Setup a preloader view
-   * This could be a simple div element in your index.html file with a progress bar (or other graphical representation) and some CSS to make it visually appealing.
+   * This could be a simple div element in your index.html file with a progress bar (or other graphical representation)
+   and some CSS to make it visually appealing.
    ```javascript
    <div id="preloader">
      <div id="loader"></div>
@@ -410,7 +442,7 @@ A general idea of how we could implement a preloader on a site.
 
 2. Implement a load manager
    * We need a resource manager to manage all loading tasks and calculate the percentage of loaded resources.
-   Here you can use a library like three.js's LoadingManager.
+   Here you can use a library like three.js LoadingManager.
    ```javascript
    const manager = new THREE.LoadingManager()
    ```
@@ -440,7 +472,7 @@ A general idea of how we could implement a preloader on a site.
    ```
    
 5. Load assets with manager
-   * Load your assets (images, 3D objects and JSON files) using loaders that capable of handling those files.
+   * Load your assets (images, 3D objects, and JSON files) using loaders that are capable of handling those files.
    For images, use ImageLoader, for 3D objects, use related loaders like ObjectLoader, FBXLoader etc.
    and JSONLoader for JSON Files.
    ```javascript
@@ -499,7 +531,7 @@ Generator functions can be used in a variety of scenarios, such as:
    This can be incredibly useful when dealing with callback-based APIs or Promises.
 
 2. Iteration
-   * Generators are iterable, and can thus be used wherever an iterable is expected.
+   * Generators are iterable, and can thus be used wherever iterable is expected.
    They can be used to define custom, possibly infinite data structures that can be used in "for...of"
    loops or with the spread operator "...".
 
@@ -542,7 +574,7 @@ promises.reduce((chain, promise) => {
    * If you keep adding properties to the global objects, then you can cause a memory leak.
 
 2. Timer or Interval callbacks
-   * Anytime you setup a repeat-action like a setInterval, you can cause a memory leak if you forget to clear it.
+   * Anytime you set up a repeat-action like a setInterval, you can cause a memory leak if you forget to clear it.
 
 3. Closures
    * Closures can cause memory leaks if they reference a scope that contains variables that use a large amount of memory.
@@ -565,7 +597,8 @@ Here are some common causes:
    where both JavaScript and layout calculations are performed.
 
 4. Memory Leaks
-   * These occur when unnecessary memory is consumed by an application due to improper garbage collection, causing the system to slow down over time.
+   * These occur when unnecessary memory is consumed by an application due to improper garbage collection,
+   causing the system to slow down over time.
 
 5. Hardware Limitations
    * End user's device capabilities may also affect the performance of animations.
@@ -581,7 +614,8 @@ Usually I use such approaches:
    This promotes better organization of code, modularity, and promotes encapsulation, inheritance, and polymorphism.
 
 3. Functional Programming
-   * It involves writing programs that avoid shared state, mutable data, and side effects. This results in fewer bugs and easier maintenance.
+   * It involves writing programs that avoid shared state, mutable data, and side effects.
+   This results in fewer bugs and easier maintenance.
 
 #### What are the options for storing data on the client?
 Storing data on the client-side can be done using several methods:
@@ -602,7 +636,8 @@ but here are a few general techniques:
 
 2. LocalStorage / SessionStorage
    * These storage options can be used for caching application data on client side.
-   You can store more permanent data in LocalStorage (for data you want persisted across multiple sessions) while SessionStorage (only persists data for current session) can be used for temporary data.
+   You can store more permanent data in LocalStorage (for data you want persisted across multiple sessions)
+   while SessionStorage (only persists data for current session) can be used for temporary data.
 
 3. IndexedDB
    * For more structured and data-intensive applications, IndexedDB can be used for client-side caching.
@@ -611,7 +646,7 @@ but here are a few general techniques:
 4. Service Workers
    * Service workers can handle caching more effectively for offline web applications.
    They can cache network requests, serve app-shell and static resources from cache, etc.
-   You can setup a caching strategy like NetworkFirst, CacheFirst, StaleWhileRevalidate etc.
+   You can set up a caching strategy like NetworkFirst, CacheFirst, StaleWhileRevalidate etc.
 
 When is it appropriate
 1. Offline Compatibility
@@ -659,24 +694,30 @@ Every object in JavaScript is associated with a prototype object, which acts as 
 This prototype object itself may have another prototype, forming a prototype chain.
 
 #### What is a Proxy?
-A Proxy object wraps another object and intercepts operations, like reading/writing properties and others, optionally handling them on its own, or transparently allowing the object to handle them.
+A Proxy object wraps another object and intercepts operations, like reading/writing properties and others,
+optionally handling them on its own, or transparently allowing the object to handle them.
 
 Details in this [article](https://javascript.info/proxy).
 
 #### What is OOP? What are the features of object-oriented programming in JavaScript?
-Object-oriented programming (OOP) is a design paradigm in software development that uses the concept of "objects," which can contain data and code.
+Object-oriented programming (OOP) is a design paradigm in software development that uses the concept of "objects,"
+which can contain data and code.
 Objects are instances of classes, which are essentially user-defined data types.
-In object-oriented programs, code is organized around the data it operates on, which is a model that allows for more flexibility and makes code easier to maintain, test, and reuse.
+In object-oriented programs, code is organized around the data it operates on,
+which is a model that allows for more flexibility and makes code easier to maintain, test, and reuse.
 
-JavaScript supports object-oriented programming, and although it's not a class-based language (it is prototype-based), it can be used to write in an object-oriented style.
+JavaScript supports object-oriented programming, and although it's not a class-based language (it is prototype-based),
+it can be used to write in an object-oriented style.
 In modern JavaScript or ES6+, we have classes as syntactic sugar over JavaScript's existing prototype-based inheritance.
 
 Here are some features of OOP in JavaScript:
 1. Objects and Prototypes
-   * In JavaScript, objects are key-value pairs. Objects in JavaScript have a hidden link to the prototype object, from which they were created.
+   * In JavaScript, objects are key-value pairs. Objects in JavaScript have a hidden link to the prototype object,
+   from which they were created.
 
 2. Classes (ES6+)
-   * JavaScript introduced classes in ES6 as a syntactic sugar for creating constructor functions. It still uses prototypical inheritance under-the-hood.
+   * JavaScript introduced classes in ES6 as a syntactic sugar for creating constructor functions.
+   It still uses prototypical inheritance under-the-hood.
 
     ```javascript
     class Car {
@@ -696,13 +737,15 @@ Here are some features of OOP in JavaScript:
    * JavaScript supports single inheritance/prototypal inheritance. Objects can inherit features from other objects.
 
 4. Encapsulation
-   * JavaScript supports encapsulation with the use of var/let/const keywords. ES6 introduced classes and modules, which further support encapsulation.
+   * JavaScript supports encapsulation with the use of var/let/const keywords.
+   ES6 introduced classes and modules, which further support encapsulation.
 
 5. Abstraction
    * JavaScript uses interfaces (objects) to achieve data abstraction and hide complex implementations from the users.
 
 6. Polymorphism
-   * JavaScript allows methods in an object to take on many forms. In other words, a single method can perform different tasks based on its inputs.
+   * JavaScript allows methods in an object to take on many forms.
+   In other words, a single method can perform different tasks based on its inputs.
 
 ---
 
@@ -725,25 +768,40 @@ Here are articles with detailed information about [Map, Set](https://javascript.
 
 Common use cases:
 **Map**
-* Map is used when you want to store key-value pairs where keys could be of any type including objects and functions, not just strings or numbers. This is useful over JavaScript objects where keys can only be strings or symbols.
-* When you need to maintain the insertion order of elements. Unlike standard JavaScript objects, iteration over the elements in a Map is in the order of element insertion.
-* When you need to quickly look up keys dynamically inside your code. With Map, key lookup time is a fast O(1) operation. In plain objects, you would have to loop through the property names using Object.keys(), which is less efficient.
-* When you want to easily know the size of your collection. Map has a size property which gives you the number of entries in it, whereas for objects, you'll need to use Object.keys(obj).length.
+* Map is used when you want to store key-value pairs where keys could be of any type including objects and functions,
+not just strings or numbers. This is useful over JavaScript objects where keys can only be strings or symbols.
+
+* When you need to maintain the insertion order of elements.
+Unlike standard JavaScript objects, iteration over the elements in a Map is in the order of element insertion.
+
+* When you need to quickly look up keys dynamically inside your code.
+With Map, key lookup time is a fast O(1) operation.
+In plain objects, you would have to loop through the property names using Object.keys(), which is less efficient.
+
+* When you want to easily know the size of your collection.
+Map has a size property which gives you the number of entries in it,
+whereas for objects, you'll need to use Object.keys(obj).length.
 
 **Set**
 * Set is used when you want to store unique values of any type. It assures that an element only occurs once in your set.
-* Similar to the Map, the Set also maintains the order of element insertion. The Set object lets you store unique values of any type, whether primitive values or object references.
-* When you need to frequently check for element existence in your collection. Set provides a fast O(1) has method for this.
+
+* Similar to the Map, the Set also maintains the order of element insertion.
+The Set object lets you store unique values of any type, whether primitive values or object references.
+
+* When you need to frequently check for element existence in your collection.
+Set provides a fast O(1) has method for this.
 
 **WeakMap**
-* Caching computed results for objects: You may want to associate computation results with objects, but don't want the objects to stay in memory if they're not used elsewhere.
-* Associating private data with objects: WeakMap is used where one wants to extend objects from outside without affecting garbage collection.
+* Caching computed results for objects
+  * You may want to associate computation results with objects,
+  but don't want the objects to stay in memory if they're not used elsewhere.
+
+* Associating private data with objects
+  * WeakMap is used where one wants to extend objects from outside without affecting garbage collection.
 
 **WeakSet**
 * Storing a set of objects, but allowing them to be garbage collected if they are no longer in use.
 * Tracking objects: WeakSet can be used to tag objects without preventing their garbage collection when they're not referenced any other way.
-
----
 
 ---
 
@@ -765,29 +823,38 @@ Arrow function is another way to declare function. It has some specifics, like:
 #### What is functional programming?
 [Functional programming](https://www.freecodecamp.org/news/functional-programming-in-javascript/) is a sub-paradigm from the Declarative paradigm, this affects the way you write functional code.
 It generally leads to less code, because JavaScript already has a lot of the in-built functions you commonly need.
-It also allows you to abstract away a lot (you don't have to understand in depth how something gets done), you call a function that does it for you.
+It also allows you to abstract away a lot (you don't have to understand in depth how something gets done), 
+you call a function that does it for you.
 
 Functional programming can be simply explained by following these two laws in your code:
 1. Architect your software out of pure, isolated functions
-   * **Pure functions**. The same input always gives the same output (idempotence), and has no side effects.
-   An idempotent function is one that, when you reapply the results to that function again, doesn't produce a different result.
-   * **Isolated functions**. There is no dependence on the state of the program, which includes global variables that are subject to change.
-   Anything that you need should be passed into the function as an argument.
-   * **Reusability through Higher order functions**.
-   A higher order function is a function that either takes a function as an argument, returns a function, or both!
-   The in-built JavaScript Array functions .map, .reduce, and .filter all accept a function.
-   They are excellent examples of higher order functions,
-   as they iterate over an array and call the function they received for each item in the array.
+   * Pure functions
+     * The same input always gives the same output (idempotence), and has no side effects.
+     An idempotent function is one that, when you reapply the results to that function again,
+     doesn't produce a different result.
+
+   * Isolated functions
+     * There is no dependence on the state of the program, which includes global variables that are subject to change.
+     Anything that you need should be passed into the function as an argument.
+
+   * Reusability through Higher order functions
+     * A higher order function is a function that either takes a function as an argument, returns a function, or both!
+     The in-built JavaScript Array functions .map, .reduce, and .filter all accept a function.
+     They are excellent examples of higher order functions,
+     as they iterate over an array and call the function they received for each item in the array.
 
 2. Avoid mutability and side effects
-   * **Make your code referentially [transparent](https://medium.com/@olxc/referential-transparency-93352c2dd713)**.
-   That is, your function calls can be replaced with the values that they represent without affecting the result.
-    ```javascript
+   * Make your code referentially [transparent](https://medium.com/@olxc/referential-transparency-93352c2dd713)
+     * That is, your function calls can be replaced with the values that they represent without affecting the result.
+
+   ```javascript
     const greetAuthor = function(){
         return 'Hi Kealan'
     }
     ```
-   * **Don't iterate**. Use the map higher order function instead of for loop.
+
+   * Don't iterate
+     * Use the map higher order function instead of for loop.
 
 3. More Features of Functional Programming
    * [Recursion](https://javascript.info/recursion) in Functional Programming
@@ -806,7 +873,8 @@ Functional programming can be simply explained by following these two laws in yo
     ```
 
    * [Currying](https://javascript.info/currying-partials) in Functional Programming
-     * The big benefit of currying is when you need to re-use the same function multiple times but only change one (or fewer) of the parameters.
+     * The big benefit of currying is when you need to re-use the same function multiple times but only change one
+     (or fewer) of the parameters.
     ```javascript
     function curryAdd(firstNum){
         return function(secondNum){
@@ -850,8 +918,10 @@ An article that explains [capturing phase and bubbling phase](https://javascript
 5. Event Delegation
    * Event delegation is a design pattern that takes advantage of event propagation to handle events efficiently.
    * Instead of attaching an event listener to each element, you can attach a single event listener to a common ancestor.
-   * When an event occurs, it will bubble up to the common ancestor, and you can check the target of the event to determine which specific element triggered the event.
-Detailed explanation of [event delegation](https://javascript.info/event-delegation) on javascript.info or an article on [freeCodeCamp](https://www.freecodecamp.org/news/event-delegation-javascript/).
+   * When an event occurs, it will bubble up to the common ancestor,
+   and you can check the target of the event to determine which specific element triggered the event.
+
+    Detailed explanation of [event delegation](https://javascript.info/event-delegation) on javascript.info or an article on [freeCodeCamp](https://www.freecodecamp.org/news/event-delegation-javascript/).
 
 6. Event Prevent Default
    * The preventDefault() method is used to stop the default behavior of an element.
@@ -863,7 +933,8 @@ Detailed explanation of [event delegation](https://javascript.info/event-delegat
    * This can be useful in scenarios where you want to prevent an event from reaching ancestor or descendant elements.
 
 #### How to know if the event.preventDefault method was used in an element?
-We can **use the event.defaultPrevented property in the event object.** It returns a boolean indicating if the event.preventDefault() was called in a particular element.
+We can **use the event.defaultPrevented property in the event object.**
+It returns a boolean indicating if the event.preventDefault() was called in a particular element.
 
 ---
 
@@ -874,13 +945,18 @@ All functions in JavaScript are closures.
 
 Let's talk about Closure a bit in-depth.
 
-In JavaScript, every running function, code block {...}, and the script as a whole have an internal (hidden) associated object known as the Lexical Environment.
+In JavaScript, every running function, code block {...},
+and the script as a whole have an internal (hidden) associated object known as the Lexical Environment.
 
 The Lexical Environment (Scope) object consists of two parts:
-* Environment Record – an object that stores all local variables as its properties (and some other information like the value of this).
+* Environment Record – an object that stores all local variables as its properties
+(and some other information like the value of this).
+
 * A reference to the outer lexical environment, the one associated with the outer code.
 
-**A “variable” is just a property of the special internal object, Environment Record. “To get or change a variable” means “to get or change a property of that object”.**
+**A “variable” is just a property of the special internal object, Environment Record.
+“To get or change a variable” means “to get or change a property of that object”.**
+
 The inner Lexical Environment has a reference to the outer one.
 When the code wants to access a variable – the inner Lexical Environment is searched first, then the outer one, then the more outer one and so on until the global one.
 
@@ -947,23 +1023,28 @@ Details in this [article](https://www.freecodecamp.org/news/understand-call-appl
 ### Event Loop
 #### What is an event loop? How does it work?
 [Event Loop](https://javascript.info/event-loop) is a crucial part of the runtime environment, responsible for managing and processing events.
-The event loop enables JavaScript to be non-blocking and asynchronous, allowing it to handle multiple operations simultaneously without waiting for one to finish before moving on to the next.
-The event loop concept is basic. There’s an endless loop, where the JavaScript engine waits for tasks, executes them and then sleeps, waiting for more tasks.
+The event loop enables JavaScript to be non-blocking and asynchronous,
+allowing it to handle multiple operations simultaneously without waiting for one to finish before moving on to the next.
+The event loop concept is basic. There’s an endless loop,
+where the JavaScript engine waits for tasks, executes them and then sleeps, waiting for more tasks.
 
 The general algorithm of the engine:
 
 1. While there are tasks:
    * execute them, starting with the oldest task.
+
 2. Sleep until a task appears, then go to 1.
 
 Here's a simplified explanation of how the event loop works:
 1. Call Stack
    * The JavaScript runtime has a call stack, which is a data structure that keeps track of function calls in the code.
-   * When a function is called, it is added to the top of the stack, and when a function is completed, it is removed from the stack.
+   * When a function is called, it is added to the top of the stack,
+   and when a function is completed, it is removed from the stack.
 
 2. Callback Queue
    * JavaScript is a single-threaded language, meaning it can only execute one operation at a time.
-   * Asynchronous operations, like setTimeout, AJAX requests, or event listeners, are not processed immediately. Instead, their callbacks are placed in the callback queue.
+   * Asynchronous operations, like setTimeout, AJAX requests, or event listeners, are not processed immediately.
+   Instead, their callbacks are placed in the callback queue.
 
 3. Event Loop
    * The event loop continuously checks the call stack and the callback queue.
@@ -995,7 +1076,9 @@ We can handle async code in several ways without async/await. Here are examples:
 2. Promises—modern way to handle async code. 
 
 #### What is a Callback Hell? Give an example.
-[Callback Hell](https://www.geeksforgeeks.org/what-to-understand-callback-and-callback-hell-in-javascript/) is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends on/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code.
+[Callback Hell](https://www.geeksforgeeks.org/what-to-understand-callback-and-callback-hell-in-javascript/) is essentially nested callbacks stacked below one another forming a pyramid structure.
+Every callback depends on/waits for the previous callback,
+thereby making a pyramid structure that affects the readability and maintainability of the code.
 
 ```javascript
 let words = document.querySelectorAll(".word");
@@ -1051,7 +1134,8 @@ Promise.all() and Promise.allSettled() are designed to handle an array of promis
 
 * Promise.allSettled()
   * The result promise of Promise.allSettled() is fulfilled with an array of objects representing the outcome of each promise.
-  Each object has a status property that is either "fulfilled" or "rejected," and a value or reason property, depending on whether the promise was fulfilled or rejected.
+  Each object has a status property that is either "fulfilled" or "rejected," and a value or reason property,
+  depending on whether the promise was fulfilled or rejected.
   It waits for all promises to settle (either fulfill or reject) before fulfilling its own promise.
 
 ---
@@ -1078,7 +1162,8 @@ console.log(obj2); // logs {a: 'a', b: 'b', c: 'c'}
 
 * Rest Operator (...)
 
-The rest operator, which uses the same ..., does almost the reverse of the spread operator. It allows you to package up elements back into an array.
+The rest operator, which uses the same ..., does almost the reverse of the spread operator.
+It allows you to package up elements back into an array.
 Here is how you can use the rest operator in a function's argument:
 
 ```javascript
@@ -1091,7 +1176,8 @@ console.log(sum(1, 2, 3)); // logs 6
 ```
 
 Although both operators use the same ... syntax, their usage and functionality are different depending on the context.
-They are called "spread" when used to expand an iterable like an array or object, and "rest" when capturing the "rest" of the elements into an array.
+They are called "spread" when used to expand an iterable like an array or object,
+and "rest" when capturing the "rest" of the elements into an array.
 
 An article on [javascript.info](https://javascript.info/rest-parameters-spread).
 
@@ -1139,7 +1225,8 @@ const foo = (...args) => (console.log(args))
 foo(1, 2, 3, 4, 5);  // [1, 2, 3, 4, 5]
 ```
 
-* Destructuring with Rest Operator: The rest operator, when used during destructuring, allows you to assign the rest of the elements of an object or an array to a particular variable.
+* Destructuring with Rest Operator: The rest operator, when used during destructuring,
+allows you to assign the rest of the elements of an object or an array to a particular variable.
 ```javascript
 let arr = [1, 2, 3, 4, 5];
 let [first, ...rest] = arr;
