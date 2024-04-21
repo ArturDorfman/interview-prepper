@@ -273,6 +273,34 @@ for (let prop in obj) {
 ```
 
 ### Hard general questions
+#### How Heap and Stack in Javascript Work?
+Heap and Stack are two areas of computer memory involved in managing data storage during the execution of a program.
+
+**Stack**
+
+A stack, or more specifically the execution stack in Javascript,
+is where function calls are allocated in memory as they are being executed.
+It is an implementation of the stack data structure but using memory!
+When your Javascript program first starts running, the global execution stack is plopped into the execution stack first.
+This stack frame creates the global object, which is the window for browsers.
+Afterward, the value of this is set to the global object, 
+and the program can continue adding more stack frames/execution contexts when it sees more function calls.
+Once the code has finished executing, the Javascript engine will then remove the global frame from the stack.
+
+**Heap**
+
+A heap in memory is an extra storage that randomly places Javascript objects when we define them in the stack.
+Complex object types in Javascript, such as Objects and Arrays,
+are called reference types because they are stored in the heap while the variable in the stack contains a reference,
+or memory address, to this object.
+This is in contrast to primitive values, such as numbers and strings, which are stored on the stack itself.
+When the reference to an object in the heap is lost,
+the Javascript engine’s automatic garbage collector will clean up the bytes from memory.
+If this were a language like C, which does not have an automatic garbage collector,
+you would have to free up the space yourself.
+
+Nice [article](https://medium.com/@dondeveloper/quickie-javascript-heap-and-stack-745b6d0c8e54) about this theme.
+
 #### How do you handle errors in your application?
 In JavaScript and TypeScript, we often handle errors using a technique known as "Try...Catch...Finally."
 Sometimes we can use Promises and the .catch() method.
